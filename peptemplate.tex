@@ -1,0 +1,47 @@
+\documentclass[a4paper,twocolumn]{scrartcl}
+
+\usepackage{lipsum}
+
+% --- packages ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[ngerman]{babel}
+\usepackage[backend=biber,style=ieee]{biblatex}
+    \addbibresource{references.bib}
+\usepackage{booktabs}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{csquotes}
+\usepackage{float}
+\usepackage{fontspec}
+    \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+\usepackage{graphicx}
+\usepackage[pdfusetitle,unicode]{hyperref}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage[math-style=ISO,bold-style=ISO]{unicode-math}
+    \setmathfont{TeX Gyre Pagella Math}
+\usepackage{xfrac}
+
+
+% --- options ---
+\setlength{\parindent}{0pt}
+
+
+% --- set up ---
+\titlehead{\centering\includegraphics[height=2cm,keepaspectratio]{logos/pep.pdf}}
+\author{Kevin Dungs}
+\title{A \LaTeX-Template for PeP et al.}
+
+\begin{document}
+\maketitle
+
+\section{Lorem Ipsum}
+\lipsum
+\subsection{Lorem Ipsum}
+\lipsum~\cite{panda}
+\section{Lorem Ipsum}
+\lipsum
+
+\printbibliography
+
+\end{document}
