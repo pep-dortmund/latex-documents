@@ -1,0 +1,57 @@
+\documentclass[fontsize=12pt, paper=a4, firsthead=false, locfield=wide, DIN, DIV14, parskip]{scrlttr2}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+
+
+\newcommand\co{\mbox{%
+\raisebox{.8ex}{c}%
+\kern-.100em\raisebox{.1ex}{/}%
+\kern-.10em\raisebox{-.1ex}{o}%
+}~}
+
+\begin{document}
+\addtokomafont{subject}{\sffamily}
+\renewcommand*{\raggedsignature}{}
+\setkomavar{backaddressseparator}{ -- }
+\setkomavar{enclseparator}{}
+\renewcaptionname{ngerman}{\enclname}{Anlage: }
+
+% *******************************************
+% ABSENDERDATEN
+% *******************************************
+\setkomavar{fromname}{{\tiny PeP et al. e.V.}}
+\setkomavar{fromaddress}{{\tiny Henning Moldenhauer\\Holsteiner Straße 33\\44145 Dortmund}}
+\setkomavar{signature}{Henning Moldenhauer\\\small{Vorstand PeP et al. e.V.}}
+\setkomavar{location}
+{\textbf{PeP et al. e.V.}\\\small{Alumni-Verein der Fakultät Physik\\www.pep-dortmund.org}\\\\ \textbf{Kontakt}\\+49 (231) 755 4526\\+49 (176) 96912228\\\\christophe.cauet@pep-dortmund.org}
+
+% *******************************************
+% EMPFAENGERDATEN
+% *******************************************
+\setkomavar{toname}{DEG Dach-Fassade Holz eG\\Renate Petzold}
+\setkomavar{toaddress}{Oberster Kamp 6\\59069 Hamm}
+
+
+
+% BETREFF
+\setkomavar{subject}[]{}
+% ANREDE
+\opening{Sehr geehrte Frau Petzold,}
+% BRIEFTEXT
+wir möchten uns mit diesem Schreiben herzlich bei Ihnen für die großzügige Zuwendung bedanken. 
+
+Der Alumni-Verein PeP et al. e.V. unterstützt die Fakultät Physik in Forschung und Lehre und fördert den Kontakt und Erfahrungsaustausch zwischen dem Fachbereich, seinen derzeitigen Studierenden und seinen Absolventen. Wir sind als gemeinnütziger Verein auf Spenden zur Finanzierung unserer Aktivitäten angewiesen und freuen uns somit sehr über Ihre Unterstützung. 
+
+Neben der Absolventenfeier, Workshops, Exkursionen und einer Sommerakademie für Physikstudierende, werden von uns jedes Jahr zwei Studierende mit einem Stipendium gefördert. Seit diesem Jahr können wir, dank zahlreicher Spenden, ein zusätzliches Stipendium vergeben. Dieses Engagement wollen wir weiter ausbauen und werden auch Ihre Spende nutzen um unsere Angebote einem noch größeren Kreis an Studierenden zugänglich zu machen.
+
+% BRIEFSCHLUSS
+\closing{Mit freundlichen Gr\"u{\ss}en}
+
+% ANHANG
+\encl{Bestätigung über Geldzuwendungen}
+
+\end{document}
