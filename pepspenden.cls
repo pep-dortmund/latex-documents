@@ -45,7 +45,7 @@
 }
 
 \ihead{%
-  \textbf{\Large PEP et al. e.V.} \\
+  \textbf{\Large PEP et al. e.\,V.} \\
 	Bestätigung über Geldzuwendungen%
 }
 
@@ -53,7 +53,7 @@
 
 \ifoot{%
   \parbox[c]{5cm}{%
-    PEP et al. e.V.\\
+    PEP et al. e.\,V.\\
     \url{www.pep-dortmund.org}\\
     \vspace{16pt}
   }
@@ -116,7 +116,7 @@ einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu §\,48 Abs.~2 E
 \vspace{0.5cm}
 Dortmund, den \today\\[1cm]
 \@author\\
-Vorstand PeP et al. e.V.
+Vorstand PeP et al. e.\,V.
 
 \vspace*{\fill}
 {\footnotesize

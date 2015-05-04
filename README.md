@@ -1,9 +1,9 @@
 # LaTeX-Templates für PeP et Al. (WIP)
 
-Dies Repo entält einige LaTeX-Klassen und Dokumente
+Dies Repo enthält einige LaTeX-Klassen und Dokumente
 für den Schriftverkehr von Pep et Al.
 
-Am besten man klont das Repo in den seinen TEXMFHOME Ordner
+Am besten man klont das Repo in den TEXMFHOME Ordner,
 den erfährt man so:
 ```{shell}
 $ kpsewhich -var-value=TEXMFHOME
@@ -31,5 +31,8 @@ Ein vollständiges Dokument könnte so aussehen:
   Erwin Musterspender\\
   Spenderstraße 5\\
   Generösenhausen
-}\end{document}
+}
+\end{document}
 ```
+
+Es können auch mehrere Spenden in einem Dokument angelegt werden
