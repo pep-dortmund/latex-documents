@@ -3,12 +3,16 @@
 Dies Repo enthält einige LaTeX-Klassen und Dokumente
 für den Schriftverkehr von Pep et Al.
 
-Am besten man klont das Repo in den TEXMFHOME Ordner,
-den erfährt man so:
+Wenn man dieses Repo nach TEXMFHOME/tex/latex/ klont,
+hat man von überall Zugriff auf die Klassen und auch Logos.
+
+TEXMFHOME ist üblicherweise `~/texmf`
+
+Den Wert erfährt man über
+
 ```{shell}
-$ kpsewhich -var-value=TEXMFHOME
+$ kpsewhich -var-value TEXMFHOME
 ```
-Normalerweise ist dies `$HOME/texmf`
 
 ## Spendenbescheinigung
 
