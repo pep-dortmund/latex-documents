@@ -36,3 +36,21 @@ Ein vollständiges Dokument könnte so aussehen:
 ```
 
 Es können auch mehrere Spenden in einem Dokument angelegt werden
+
+## Newsletter
+
+Die Klasse `pepnewsletter` ist ein Zweispalten-Layout mit recht kleinen Rändern,
+Title und Datum werden links im header gesetzt:
+
+```{latex}
+\documentclass{pepnewsletter}
+
+\title{Newsletter}
+\date{Mai 2015}
+
+\begin{document}
+\section*{Liebe Mitglieder}
+
+...
+\end{document}
+```
