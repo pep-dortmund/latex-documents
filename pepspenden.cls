@@ -116,7 +116,7 @@ Es wird bestätigt, dass die Zuwendung nur zur Förderung der Volks- und Berufsb
 einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu §\,48 Abs.~2 Einkommensteuer-Durchführungsverordnung – Abschnitt A Nr.~4), verwendet wird.}
 
 \vspace{0.5cm}
-Dortmund, den \today\\[1cm]
+Dortmund, den \@date\\[1cm]
 \@author\\
 Vorstand PeP et al.\ e.\,V.\
 
