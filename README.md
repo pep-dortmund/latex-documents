@@ -16,7 +16,7 @@ Die Klasse `pepspenden` ist für das Austellen von Spendenbescheinigungen
 gedacht, aktuell ist sie auf die Verwendung von lualatex ausgelegt.
 
 Eine Spendenbescheinigung kann mit dem Befehl 
-`\spende{<betrag>}{<betrag in worten>}{<datum>}{<spenderadresse>}`
+`\spende{<betrag>}{<datum>}{<spenderadresse>}`
 erzeugt werden.
 
 Es sollte außerdem der Unterschreibende als Autor eingetragen sein.
@@ -27,7 +27,7 @@ Ein vollständiges Dokument könnte so aussehen:
 \author{Max Mustermann}
 
 \begin{document}
-\spende{5000,–}{fünftausend}{1.1.2015}{%
+\spende{5000}{1.1.2015}{%
   Erwin Musterspender\\
   Spenderstraße 5\\
   Generösenhausen

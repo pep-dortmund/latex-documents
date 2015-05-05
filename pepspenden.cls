@@ -8,6 +8,8 @@
 \RequirePackage{polyglossia}
 \setmainlanguage{german}
 
+\RequirePackage{fmtcount}
+\FCloadlang{german}
 
 \RequirePackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
@@ -45,7 +47,7 @@
 }
 
 \ihead{%
-  \textbf{\Large PEP et al. e.\,V.} \\
+  \textbf{\Large PEP et al.\ e.\,V.} \\
 	Bestätigung über Geldzuwendungen%
 }
 
@@ -53,7 +55,7 @@
 
 \ifoot{%
   \parbox[c]{5cm}{%
-    PEP et al. e.\,V.\\
+    PEP et al.\ e.\,V.\\
     \url{www.pep-dortmund.org}\\
     \vspace{16pt}
   }
@@ -61,7 +63,7 @@
 
 \cfoot{%
   \parbox[c]{4.2cm}{%
-    PEP et al. e.\,V.\\
+    PEP et al.\ e.\,V.\\
     z.\,Hd. \vorsitzender
   }
 }
@@ -76,7 +78,7 @@
   }
 }
 
-\DeclareDocumentCommand\spende{m m m m}{%
+\DeclareDocumentCommand\spende{m m m}{%
 \newpage
 \textbf{Aussteller}
 
@@ -87,7 +89,7 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 
 \textbf{Name und Anschrift des Zuwendenden}
 
-#4
+#3
 
 \renewcommand{\arraystretch}{1.2}
 \begin{center}
@@ -97,7 +99,7 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 		\rowcolor{grau}
 		 Betrag in Ziffern	&	Betrag in Buchstaben	&	Tag der Zuwendung\\
 		\tabucline[1pt]{-}
-		\rmfamily\normalfont #1\,€ & \normalfont #2 Euro	&	#3\\
+    \rmfamily\normalfont #1\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
 		\tabucline[1pt]{-}
 	\end{tabu}
 \end{center}
@@ -116,7 +118,7 @@ einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu §\,48 Abs.~2 E
 \vspace{0.5cm}
 Dortmund, den \today\\[1cm]
 \@author\\
-Vorstand PeP et al. e.\,V.
+Vorstand PeP et al.\ e.\,V.\
 
 \vspace*{\fill}
 {\footnotesize
@@ -124,6 +126,6 @@ Hinweis:
 
 Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden, haftet für die Steuer, die dem Fiskus durch einen etwaigen Abzug der Zuwendungen bei Zuwendenden entgeht (§10b Abs. 4 EStG, §9 Abs. 3 KStG, §9 Nr. 5 GewStG).
 
-Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als 5 Jahre bzw. das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit Ausstellung der Bestätigung zurückliegt (BMF vom 15.12.1994 – BStBI I S. 884)
+Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als 5 Jahre bzw.\ das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit Ausstellung der Bestätigung zurückliegt (BMF vom 15.12.1994 – BStBI I S.~884)
 }
 }
