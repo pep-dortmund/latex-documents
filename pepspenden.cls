@@ -2,11 +2,24 @@
 \ProcessOptions\relax
 \LoadClass{scrartcl}
 
-\RequirePackage{fontspec}
-\setmainfont{Source Sans Pro}
 
-\RequirePackage{polyglossia}
-\setmainlanguage{german}
+\ifluatex%
+  \RequirePackage{fontspec}
+  \setmainfont{Source Sans Pro}
+  \RequirePackage{polyglossia}
+  \setmainlanguage{german}
+\else%
+  \ifxetex%
+    \RequirePackage{fontspec}
+    \setmainfont{Source Sans Pro}
+    \RequirePackage{polyglossia}
+    \setmainlanguage{german}
+  \else%
+    \RequirePackage[utf8]{inputenc}
+    \RequirePackage[T1]{fontenc}
+    \RequirePackage[default]{sourcesanspro}
+  \fi
+\fi
 
 \RequirePackage{fmtcount}
 \FCloadlang{german}
