@@ -1,0 +1,125 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  headheight=52pt,
+  footheight=45pt,
+  headinclude,
+  parskip=full,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+\ohead{\includegraphics[height=1.5cm]{pep.pdf}}
+\ihead{%
+  \large\bfseries PeP et al.\ e.\,V.\\%
+  Begabtenförderungsprogramm –\\
+  Deutschlandstipendien%
+}
+\cfoot{}
+\ifoot{%
+  PeP et al.~e.\,V.\\
+  Begabtenförderung\\
+  \url{www.pep-dortmund.org}
+}
+
+
+\usepackage{titling}
+\usepackage{booktabs}
+
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+\date{31. Juli 2014}
+
+\begin{document}
+\section*{Bewerbungsunterlagen}
+\emph{Formale Hinweise}
+
+Bitte reiche Deinen Antrag bis zum \thedate{} im Dekanat (bei Frau Schwertfeger) ein,
+addressiert an:
+
+Dekanat Physik\\
+Prof.~Dr.~Götz~Uhrig\\
+P2-E0-413\\[0.5\baselineskip]
+Technische Universität Dortmund\\
+Otto-Hahn-Str.~4\\
+44221 Dortmund
+
+Um für das Bewerbungsverfahren zugelassen zu werden, muss Dein Antrag bestehen aus:
+\begin{itemize}
+  \item einem 1-seitigem \textbf{Motivationsschreiben}
+  \item einem vollständigen, tabellarischen \textbf{Lebenslauf} mit Unterschrift,
+  \item und den vollständig ausgefüllten und unterschriebenen \textbf{Bewertbungsunterlagen}
+\end{itemize}
+
+\textbf{%
+  Eine Bewerbung ist nur möglich, wenn du an der Technischen Universität Dortmund als Student eingeschrieben bist und Physik im Studiengang \emph{Bachelor of Science Physik},
+  \emph{Bachelor of Science Lehramt Physik (BfP)} oder \emph{Bachelor of Science Medizinphysik} studierst und zum Wintersemester im dritten oder fünften Fachsemester sein wirst.
+}
+
+Bitte reiche nur DIN A4 Dokumente ein. Klammer oder hefte diese nicht und nutze auch
+keine Klarsichtfolien. Unvollständige Bewerbungen werden nicht berücksichtigt.
+
+Für persönliche Fragen stehen Dir Julian Wishahi und Christophe Cauet (P2-O1-424) zur
+Verfügung.
+
+\newpage
+\section*{Bewerbungsunterlagen}
+\emph{Persönliche Daten}
+
+\begin{Form}
+  \renewcommand\arraystretch{2}
+  \begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}
+    \TextField[width=5cm, charsize=12pt]{Name}  & \\
+    \TextField[width=3cm, charsize=12pt]{Geburtstag}  & 
+    \TextField[width=3cm, charsize=12pt]{Familienstand}  \\
+    \TextField[width=5cm, charsize=12pt, multiline=true, height=1.5cm]{Semesteranschrift} &
+    \TextField[width=5cm, charsize=12pt, multiline=true, height=1.5cm]{Heimatanschrift} \\
+    \TextField[width=4cm, charsize=12pt]{Telefonnummer}  & 
+    \TextField[width=5cm, charsize=12pt]{Email}  \\
+    \TextField[width=0.5cm, charsize=12pt]{Studiensemester}  & 
+    \TextField[width=0.5cm, charsize=12pt]{Fachsemester}  \\
+    \TextField[width=4cm, charsize=12pt]{Studienbeginn}  & 
+    \TextField[width=4cm, charsize=12pt]{Studiengang}  \\
+  \end{tabular}
+
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }\\%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+  \TextField[width=\textwidth, height=2cm, multiline=true, charsize=12pt]{Ich habe mich auch um ein Stipendium beworben bei}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+Ich erhalte aktuell eine Studienförderung \hspace{1cm} \TextField[width=0.5cm]{ja} \hspace{0.5cm} \TextField[width=0.5cm]{nein}
+
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1}][l]{#1}%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+Wenn ja, vom \TextField[width=2.5cm]{} bis zum \TextField[width=2.5cm]{}. \TextField[width=6cm]{Institution: }
+\end{Form}
+
+Ich werde dem PEP et al. e.V. Begabtenförderungsprogramm umgehend Mitteilung machen, falls mir von anderer Stelle eine Studienförderung zugesprochen wird.
+
+Mir ist bekannt, dass falsche Angaben eine Förderung durch das PeP et al.\ e.\,V.\ Begabtenförderungsprogramm ausschließen.
+Ich versichere die Richtigkeit der gemachten Angaben.
+
+\vspace{2cm}
+\begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}%
+\rule{6cm}{1pt} & \rule{7cm}{1pt} \\
+Ort, Datum & Unterschrift 
+\end{tabular}
+\end{document}
+
