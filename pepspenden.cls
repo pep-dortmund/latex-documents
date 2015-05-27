@@ -2,6 +2,9 @@
 \ProcessOptions\relax
 \LoadClass{scrartcl}
 
+%Fontsettings, compatible with all engines
+\RequirePackage{ifxetex}
+\RequirePackage{ifluatex}
 
 \ifluatex%
   \RequirePackage{fontspec}
