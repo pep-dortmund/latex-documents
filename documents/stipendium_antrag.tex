@@ -41,8 +41,11 @@
 \usepackage{xcolor}
 \usepackage{calc}
 \usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
 \renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
 \raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
 
 \date{31. Juli 2014}
 
@@ -85,30 +88,30 @@ Verfügung.
 \begin{Form}
   \renewcommand\arraystretch{2}
   \begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}
-    \TextField[width=5cm, charsize=12pt]{Name}  & \\
-    \TextField[width=3cm, charsize=12pt]{Geburtstag}  & 
-    \TextField[width=3cm, charsize=12pt]{Familienstand}  \\
-    \TextField[width=5cm, charsize=12pt, multiline=true, height=1.5cm]{Semesteranschrift} &
-    \TextField[width=5cm, charsize=12pt, multiline=true, height=1.5cm]{Heimatanschrift} \\
-    \TextField[width=4cm, charsize=12pt]{Telefonnummer}  & 
-    \TextField[width=5cm, charsize=12pt]{Email}  \\
-    \TextField[width=0.5cm, charsize=12pt]{Studiensemester}  & 
-    \TextField[width=0.5cm, charsize=12pt]{Fachsemester}  \\
-    \TextField[width=4cm, charsize=12pt]{Studienbeginn}  & 
-    \TextField[width=4cm, charsize=12pt]{Studiengang}  \\
+    \MyTextField[width=5cm]{Name}  & \\
+    \MyTextField[width=3cm]{Geburtstag}  & 
+    \MyTextField[width=3cm]{Familienstand}  \\
+    \MyTextField[width=5cm, multiline=true, height=1.5cm]{Semesteranschrift} &
+    \MyTextField[width=5cm, multiline=true, height=1.5cm]{Heimatanschrift} \\
+    \MyTextField[width=4cm]{Telefonnummer}  & 
+    \MyTextField[width=7cm]{Email}  \\
+    \MyTextField[width=0.5cm]{Studiensemester}  & 
+    \MyTextField[width=0.5cm]{Fachsemester}  \\
+    \MyTextField[width=4cm]{Studienbeginn}  & 
+    \MyTextField[width=4cm]{Studiengang}  \\
   \end{tabular}
 
 \renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }\\%
 \raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
-  \TextField[width=\textwidth, height=2cm, multiline=true, charsize=12pt]{Ich habe mich auch um ein Stipendium beworben bei}
+  \MyTextField[width=\textwidth, height=2cm, multiline=true]{Ich habe mich auch um ein Stipendium beworben bei}
 \renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
 \raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
 
-Ich erhalte aktuell eine Studienförderung \hspace{1cm} \TextField[width=0.5cm]{ja} \hspace{0.5cm} \TextField[width=0.5cm]{nein}
+Ich erhalte aktuell eine Studienförderung \hspace{1cm} \MyTextField[width=0.5cm]{ja} \hspace{0.5cm} \MyTextField[width=0.5cm]{nein}
 
 \renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1}][l]{#1}%
 \raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
-Wenn ja, vom \TextField[width=2.5cm]{} bis zum \TextField[width=2.5cm]{}. \TextField[width=6cm]{Institution: }
+Wenn ja, vom \MyTextField[width=2.5cm]{} bis zum \MyTextField[width=2.5cm]{}. \MyTextField[width=6cm]{Institution: }
 \end{Form}
 
 Ich werde dem PEP et al. e.V. Begabtenförderungsprogramm umgehend Mitteilung machen, falls mir von anderer Stelle eine Studienförderung zugesprochen wird.
