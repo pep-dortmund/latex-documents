@@ -1,0 +1,130 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  headheight=52pt,
+  footheight=45pt,
+  headinclude,
+  parskip=half,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+\ohead{\includegraphics[height=1.5cm]{pep.pdf}}
+\ihead{%
+  \large\textbf{PeP et al.\ e.\,V.}\\%
+  Antrag auf Mitgliedschaft
+}
+\cfoot{%
+  \parbox[c]{0.3\textwidth}{%
+    \input{pepadresse.tex}%
+  }%
+}
+
+\ofoot{%
+  \parbox[c]{0.3\textwidth}{%
+  Bankverbindung\\
+  \input{pepbankverbindung.tex}%
+  }%
+}
+\ifoot{%
+  PEP et al.\ e.\,V.\\
+  \url{www.pep-dortmund.org}
+}
+
+
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{wasysym}
+
+\usepackage{enumitem}
+
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+
+\begin{document}
+Name, Vorname: \hrulefill
+
+Straße, PLZ, Wohnort: \hrulefill
+
+Telefon: \rule{6cm}{0.4pt}
+Email: \hrulefill
+
+Aktueller Arbeitgeber oder Universität und Tätigkeit: \hrulefill
+
+Geburtstag: \rule{4cm}{0.4pt}
+Abschluss: \rule{4cm}{0.4pt}
+Abschlussjahr: \hrulefill 
+
+\begin{tabular}{@{} l @{\hspace{2em}} l}
+  Ich beantrage die Mitgliedschaft als:  & \Box\hspace{1em} ordentliches Mitglied \\
+& \Box\hspace{1em} außerordentliches Mitglied
+\end{tabular}
+
+Ich bin/war an der Fakultät Physik der TU Dortmund als
+\begin{center}
+  \begin{tabular}{l@{\hspace{4em}}l}
+    \Box\hspace{1em} Student &
+    \Box\hspace{1em} wissenschaftlicher Mitarbeiter \\
+    \Box\hspace{1em} Dozent &
+    \Box\hspace{1em} nichtwissenschaftlicher Mitarbeiter \\
+  \end{tabular}
+\end{center}
+
+Ich bin damit einverstanden,
+dass meine Email-Adresse / Telefonnummer an andere Vereinsmitglieder,
+nicht jedoch an Unternehmen oder andere Dritte,
+zur Kontaktaufnahme weitergegeben wird.
+\hspace{2em}\Box\hspace{1em} Ja 
+\hspace{2em}\Box\hspace{1em} Nein
+
+\minisec{Beitragszahlung}
+Den Jahresbeitrag von 10,– EUR zahle ich per Banküberweisung oder Dauerauftrag jeweils zum Jahresanfang auf folgendes Konto:
+
+\begin{description}[nosep, align=parleft, labelwidth=4em,]
+  \item[Bank:] Dortmunder Volksbank
+  \item[IBAN:] DE22 4416 0014 6348 4161 00
+  \item[BIC:]  GENODEM1DOR
+\end{description}
+
+Studierende der Physik sind für die Dauer ihres Studiums vom Mitgliedsbeitrag befreit.
+
+Anstelle des regulären Mitgliedsbeitrags kann auch ein Förderbeitrag von 25,– EUR bzw.
+50,– EUR oder mehr geleistet werden.
+
+Für die geleisteten Beiträge stellt der Verein gerne eine Quittung aus. 
+
+\begin{center}
+  \begin{tabular}{p{0.3\textwidth} @{\extracolsep{5em}} p{0.5\textwidth}}
+  \hrulefill & \hrulefill \\
+  Ort, Datum & Unterschrift (Neumitglied)
+\end{tabular}
+\end{center}
+
+\begin{center}
+   
+\end{center}
+
+\begin{center}
+  \large
+  Weitere Informationen zum Verein und unseren Aktivitäten gibt es auf:\\
+  \url{www.pep-dortmund.org}
+\end{center}
+\end{document}
