@@ -21,6 +21,7 @@
     \RequirePackage[utf8]{inputenc}
     \RequirePackage[T1]{fontenc}
     \RequirePackage[default]{sourcesanspro}
+    \RequirePackage[ngerman]{babel}
   \fi
 \fi
 
