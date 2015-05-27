@@ -1,4 +1,4 @@
-\ProvidesClass{pepspenden [2015/05/05] Klasse fuer PeP Spendenbescheinigungen}
+\ProvidesClass{pepspenden}[2015/05/05 Klasse fuer PeP Spendenbescheinigungen]
 \ProcessOptions\relax
 \LoadClass{scrartcl}
 
@@ -43,6 +43,8 @@
 \RequirePackage{tabu}
 \RequirePackage{array}
 \RequirePackage{colortbl}
+\RequirePackage{siunitx}
+\sisetup{locale=DE, group-separator=., group-minimum-digits=4}
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \RequirePackage{xcolor}
@@ -112,7 +114,7 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 		\rowcolor{grau}
 		 Betrag in Ziffern	&	Betrag in Buchstaben	&	Tag der Zuwendung\\
 		\tabucline[1pt]{-}
-    \rmfamily\normalfont #1\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
+    \rmfamily\normalfont \num{#1},–\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
 		\tabucline[1pt]{-}
 	\end{tabu}
 \end{center}
