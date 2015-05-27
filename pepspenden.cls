@@ -82,8 +82,7 @@
 
 \cfoot{%
   \parbox[c]{4.2cm}{%
-    PEP et al.\ e.\,V.\\
-    z.\,Hd. \vorsitzender
+    \input{pepadresse.tex}%
   }
 }
 
@@ -91,9 +90,7 @@
   \hfill%
   \parbox[c]{5cm}{%
     Bankverbindung\\
-    Dortmunder Volksbank\\
-    IBAN: DE22 4416 0014 6348 4161 00\\
-    BIC: GENODEM1DOR%
+    \input{pepbankverbindung.tex}%
   }
 }
 
