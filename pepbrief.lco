@@ -1,0 +1,36 @@
+\ProvidesFile{pepbrief.lco}[2015/07/05 LetterClassOptions fuer Pep et Al.]
+
+\LoadLetterOption{DIN}
+
+% \KOMAoptions{%}
+
+\setkomavar{firsthead}{%
+  \parbox[t]{0.3\textwidth}{%
+    \vspace{0pt}%
+    \input{pepadresse.tex}%
+  }%
+  \hfill
+  \parbox[t]{0.5\textwidth}{%
+    \vspace{0pt}%
+    \raggedleft%
+    \usekomavar{fromlogo}\\
+    \usekomavar{fromurl}\\
+    \usekomavar{fromemail}%
+  }%
+}%
+
+\renewcommand{\familydefault}{\sfdefault}
+\newcommand\email[1]{\setkomavar{fromemail}{\href{mailto:#1}{#1}}}
+
+\setkomavar{fromlogo}{\includegraphics[height=1.5cm]{pep.pdf}}
+
+\setkomavar{fromurl}[]{\url{www.pep-dortmund.org}}
+\setkomavar{signature}{\@author\\Vorstand PeP et al.\ e.\,V.}
+\setkomavar{place}{Dortmund}
+\renewcommand*{\raggedsignature}{\raggedright}
+% \setkomavar{location}{%
+%   \raggedright%
+%   \textbf{PeP et al. e.V.}\\
+%   Alumni-Verein der Fakultät Physik der TU Dortmund\\
+%   \url{www.pep-dortmund.org}
+% }
