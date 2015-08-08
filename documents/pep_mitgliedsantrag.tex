@@ -11,6 +11,8 @@
 \usepackage{fontspec}
 \setsansfont{Source Sans Pro}
 \renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\geomfont{DejaVu Sans}
+\newcommand\checkbox{{\geomfont\symbol{"25A2}}}
 
 \usepackage{polyglossia}
 \setmainlanguage{german}
@@ -47,7 +49,6 @@
 \usepackage{titling}
 \usepackage{booktabs}
 \usepackage{wasysym}
-
 \usepackage{enumitem}
 
 \usepackage{xcolor}
@@ -70,17 +71,17 @@ Abschluss: \rule{4cm}{0.4pt}
 Abschlussjahr: \hrulefill\\[0.5\baselineskip]%
 
 \begin{tabular}{@{} l @{\hspace{2em}} l}
-  Ich beantrage die Mitgliedschaft als:  & \Box\hspace{1em} ordentliches Mitglied \\
-& \Box\hspace{1em} außerordentliches Mitglied
+  Ich beantrage die Mitgliedschaft als:  & \checkbox\hspace{1em} ordentliches Mitglied \\
+& \checkbox\hspace{1em} außerordentliches Mitglied
 \end{tabular}
 
 Ich bin/war an der Fakultät Physik der TU Dortmund als
 \begin{center}
   \begin{tabular}{l@{\hspace{4em}}l}
-    \Box\hspace{1em} Student &
-    \Box\hspace{1em} wissenschaftlicher Mitarbeiter \\
-    \Box\hspace{1em} Dozent &
-    \Box\hspace{1em} nichtwissenschaftlicher Mitarbeiter \\
+    \checkbox\hspace{1em} Student &
+    \checkbox\hspace{1em} wissenschaftlicher Mitarbeiter \\
+    \checkbox\hspace{1em} Dozent &
+    \checkbox\hspace{1em} nichtwissenschaftlicher Mitarbeiter \\
   \end{tabular}
 \end{center}
 
@@ -88,8 +89,8 @@ Ich bin damit einverstanden,
 dass meine Email-Adresse / Telefonnummer an andere Vereinsmitglieder,
 nicht jedoch an Unternehmen oder andere Dritte,
 zur Kontaktaufnahme weitergegeben wird.
-\hspace{2em}\Box\hspace{1em} Ja 
-\hspace{2em}\Box\hspace{1em} Nein
+\hspace{2em}\checkbox\hspace{1em} Ja 
+\hspace{2em}\checkbox\hspace{1em} Nein
 
 \minisec{Beitragszahlung}
 Den Jahresbeitrag von 10,– EUR zahle ich per Banküberweisung oder Dauerauftrag jeweils zum Jahresanfang auf folgendes Konto:
