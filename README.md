@@ -1,7 +1,7 @@
-# LaTeX-Templates für PeP et Al. (WIP)
+# LaTeX-Templates für PeP et al.
 
-Dies Repo enthält einige LaTeX-Klassen und Dokumente
-für den Schriftverkehr von Pep et Al.
+Dieses Repo enthält einige LaTeX-Klassen und Dokumente
+für den Schriftverkehr von Pep et al.
 
 Wenn man dieses Repo nach TEXMFHOME/tex/latex/ klont,
 hat man von überall Zugriff auf die Klassen und auch Logos.
