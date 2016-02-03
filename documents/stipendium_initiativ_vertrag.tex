@@ -41,12 +41,8 @@
 \usepackage{siunitx}
 \usepackage{enumerate}
 
-\usepackage{titlesec}
-\titleformat{\section}{\normalfont\Large\bfseries}{\S\thesection}{1em}{}
+\renewcommand*{\sectionformat}{\S\thesection\autodot\enskip}
 
-\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
-\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
-\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
 
 \date{02. Februar 2015}
 
@@ -72,7 +68,7 @@ wohnhaft in
 nachfolgend Stipendiat/in genannt ein Stipendium für sein/ihr
 Forschungspraktikum/Auslandssemester/berufsvorbereitendes Praktikum oder
 weitergehende wissenschaftliche Qualifikation.
-PeP et al. und der/die Stipendiat/in treffen folgende Vereinbarung über die
+PeP et al.\ und der/die Stipendiat/in treffen folgende Vereinbarung über die
 Förderung:
 
 \section{Förderungszweck}
