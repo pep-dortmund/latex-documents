@@ -1,0 +1,93 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  headheight=52pt,
+  footheight=45pt,
+  headinclude,
+  parskip=full,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+\ohead{\includegraphics[height=1.5cm]{pep.pdf}}
+\ihead{%
+  \large\bfseries PeP et al.\ e.\,V.\\%
+  Begabtenförderungsprogramm –\\
+  Initiativstipendien%
+}
+\cfoot{}
+\ifoot{%
+  PeP et al.~e.\,V.\\
+  Begabtenförderung\\
+  \url{www.pep-dortmund.org}
+}
+
+
+\usepackage{titling}
+\usepackage{booktabs}
+
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+
+\begin{document}
+\section*{Bewerbungsunterlagen}
+\emph{Formale Hinweise}
+
+Bitte reiche Deine Bewerbung bis zum Quartalsende (31. März, 30. Juni,
+30. September oder 31. Dezember) beim PeP-Vorstand
+(Henning Moldenhauer, Alex Birnkraut oder Vanessa Müller) ein,
+addressiert an:
+
+PeP et al. e.V.\\
+Henning Moldenhauer\\
+CP-01-190\\[0.5\baselineskip]
+Technische Universität Dortmund\\
+Otto-Hahn-Str.~4a\\
+44221 Dortmund
+
+Um für das Bewerbungsverfahren zugelassen zu werden, muss Dein Antrag bestehen aus:
+\begin{itemize}
+  \item einem vollständigen, tabellarischen \textbf{Lebenslauf},
+  \item einem 1- bis 2-seitigen \textbf{Motivationsschreiben}, in welchem Du
+	  begründest warum Dein Projekt förderungswürdig ist,
+  \item eine \textbf{Selbstdarstellung}, aus welcher dein soziales/
+	  gesellschaftliches/fakultätsinternes und/oder sonstiges Engagement hervorgeht.
+  \item einer \textbf{Aufschlüsselung} Deiner kosten, sodass wir abschätzen können,
+	  ob eine Förderung notwendig ist.
+\end{itemize}
+
+\textbf{%
+  Eine Bewerbung ist nur möglich, wenn du an der Technischen Universität Dortmund
+  als Student eingeschrieben bist und Physik im Studiengang
+  \emph{Bachelor of Science Physik},
+  \emph{Bachelor of Science Lehramt Physik (BfP)},
+  \emph{Bachelor of Science Medizinphysik},
+  \emph{Master of Science Physik},
+  \emph{Master of Science Lehramt Physik (MfP)} oder
+  \emph{Master of Science Medizinphysik} studierst.
+}
+
+Bitte reiche nur DIN A4 Dokumente ein. Klammer oder hefte diese nicht und nutze auch
+keine Klarsichtfolien. Unvollständige Bewerbungen werden nicht berücksichtigt.
+
+Für persönliche Fragen stehen Dir Thorben Menne (CP-03-142) und
+Henning Moldenhauer (CP-O1-190) zur Verfügung.
+\end{document}
