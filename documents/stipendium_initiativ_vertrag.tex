@@ -15,21 +15,16 @@
 
 \usepackage{microtype}
 
+\usepackage[margin=2cm, bottom=3cm]{geometry}
+
 \usepackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
 \setkomafont{pagehead}{\normalfont}
 \setkomafont{pagefoot}{\normalfont\footnotesize}
 
-\newpairofpagestyles[scrheadings]{firstpage}{
-	\KOMAoptions{headheight=52pt}
-	\recalctypearea
-	\ohead{\includegraphics[height=1.5cm]{pep.pdf}}
-	\ihead{%
-	  \large\bfseries PeP et al.\ e.\,V.\\%
-	  Begabtenförderungsprogramm –\\
-	  Initiativstipendium%
-	}
-}
+% \newpairofpagestyles[scrheadings]{firstpage}{
+% 	}
+% }
 
 \usepackage{titling}
 \usepackage{booktabs}
@@ -47,8 +42,15 @@
 \date{02. Februar 2015}
 
 \begin{document}
-
-\thispagestyle{firstpage}
+  \begin{minipage}{0.45\textwidth}%
+	  \large\bfseries PeP et al.\ e.\,V.\\%
+	  Begabtenförderungsprogramm –\\%
+	  Initiativstipendium%
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics[height=1.5cm]{pep.pdf}
+  \end{minipage}%
 \section*{Stipendiumsvertrag}
 
 Der Verein
