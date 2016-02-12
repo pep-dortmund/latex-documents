@@ -1,0 +1,37 @@
+\documentclass[paper=a5]{scrartcl}
+
+\usepackage[margin=1cm]{geometry}
+\usepackage{fontspec}
+\setsansfont{Fira Sans}
+\renewcommand\familydefault\sfdefault
+\usepackage{graphicx}
+\usepackage[HTML]{xcolor}
+
+\usepackage{pgffor}
+
+\pagestyle{empty}
+
+\definecolor{col1}{HTML}{D451D4}
+\definecolor{col2}{HTML}{65BC39}
+\definecolor{col3}{HTML}{CA5621}
+\definecolor{col4}{HTML}{5977BD}
+\definecolor{col5}{HTML}{AB3868}
+\definecolor{col6}{HTML}{B49616}
+\definecolor{col7}{HTML}{A757A5}
+\definecolor{col8}{HTML}{806BDA}
+\definecolor{col9}{HTML}{CC3C43}
+\definecolor{col10}{HTML}{E23F8C}
+
+\begin{document}
+
+\foreach \num  in {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}{%
+  \centering%
+  \includegraphics[height=1.5cm]{mindstorms.pdf}\\
+  \vfill
+  {\fontsize{400}{500}\color{col\num}\selectfont \num}\\
+  \vfill
+  \includegraphics[height=2cm]{pep.pdf}
+    
+  \newpage
+}
+\end{document}
