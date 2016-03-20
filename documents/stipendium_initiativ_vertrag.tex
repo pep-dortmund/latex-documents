@@ -36,6 +36,20 @@
 
 \date{02. Februar 2015}
 
+\newcommand\vorsitzender{Henning Moldenhauer}
+
+% Daten des Stipendiaten
+\newcommand\stipendiat{NAME}		% Name
+\newcommand\stipgeburt{DATUM}		% Geburtsdatum
+\newcommand\stipanschrift{STADT}	% Wohnort
+\newcommand\stipbetrag{0}		% Höhe der Förderung
+\newcommand\stipstart{STARTDATUM}	% Beginn der Förderung
+\newcommand\stipende{ENDDATUM}		% Ende der Förderung
+\newcommand\stipkontoinhaber{}		% Kontodaten auf welches die Förderung
+\newcommand\stipbank{}			% überwiesen werden soll.
+\newcommand\stipiban{}			% 
+\newcommand\stipbetreuung{NAME DES KONTAKTES}	% Name des Projektbetreuers
+
 \begin{document}
   \begin{minipage}{0.45\textwidth}%
 	  \large\bfseries PeP et al.\ e.\,V.\\%
@@ -55,12 +69,12 @@ der TechnischenUniversität Dortmund et al. e.V.\\
 Otto-Hahn-Str.~4\\
 44221 Dortmund
 
-vertreten durch den ersten Vorsitzenden Henning Moldenhauer nachfoldend
+vertreten durch den ersten Vorsitzenden \vorsitzender\ nachfoldend
 PeP et al. genannt, vergibt an
 
-Herrn/Frau\\
-Geboren am\\
-wohnhaft in
+Herrn/Frau \stipendiat\\
+Geboren am \stipgeburt\\
+wohnhaft in \stipanschrift
 
 nachfolgend Stipendiat/in genannt ein Stipendium für sein/ihr
 Forschungspraktikum/Auslandssemester/berufsvorbereitendes Praktikum oder
@@ -91,15 +105,14 @@ Förderung:
 
 \begin{enumerate}[\qquad(1)]
 	\item Der Stipendiengeber gewährt dem/der Stipendiaten/in ein
-		Stipendium in Höhe von \num{000}\,€ pro Monat innerhalb
-		des Zeitraumes vom STARTDATUM EINTRAGEN bis zum ENDDATUM
-		EINTRAGEN.
+		Stipendium in Höhe von \num{\stipbetrag}\,€ pro Monat innerhalb
+		des Zeitraumes vom \stipstart\ bis zum \stipende.
 	\item Die Zahlung erfolgt monatlich im Voraus durch Überweisung auf
 		das nachstehend genannte Bankkonto:
 
-		Kontoinhaber:\\
-		Bankinstitut:\\
-		IBAN:\\
+		Kontoinhaber:\stipkontoinhaber\\
+		Bankinstitut:\stipbank\\
+		IBAN:\stipiban\\
 \end{enumerate}
 
 \section{Pflichten des/der Stipendiaten/in}
@@ -149,7 +162,7 @@ Förderung:
 \section{Verantwortlicher Hochschullehrer}
 
 \begin{enumerate}[\qquad(1)]
-	\item Die Betreuung des Forschungsvorhabens erfolgt durch NAME DES KONTAKTES.
+	\item Die Betreuung des Forschungsvorhabens erfolgt durch \stipbetreuung.
 \end{enumerate}
 
 \section{Haftung}
