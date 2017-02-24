@@ -1,12 +1,20 @@
-TEXOPTS=--output-directory=build --interaction=nonstopmode --halt-on-error
+TEXOPTS= --lualatex \
+	 --output-directory=build \
+	 --interaction=nonstopmode \
+	 --halt-on-error
 
-TARGETS=soak brief mitgliedsantrag stip_antrag stip_aushang inistip_vertrag inistip_info
+TARGETS=soak_anmeldung \
+	brief \
+	mitgliedsantrag \
+	stipendium_antrag \
+	stipendium_aushang \
+	stipendium_initiativ \
+	stipendium_initiativ_vertrag
 
-all: $(addsuffix .pdf, $TARGETS)
+all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
-soak.pdf: soak_anmeldung.tex | build
-	lualatex $(TEXOPTS) $<
-	lualatex $(TEXOPTS) $<
+build/%.pdf: %.tex | build
+	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $^
 
 
 build:
