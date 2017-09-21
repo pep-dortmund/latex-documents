@@ -16,6 +16,7 @@
 \setmainlanguage{german}
 
 \usepackage{microtype}
+\usepackage{graphicx}
 
 \usepackage{scrlayer-scrpage}
 \pagestyle{scrheadings}
@@ -89,15 +90,15 @@ Verfügung.
   \renewcommand\arraystretch{2}
   \begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}
     \MyTextField[width=5cm]{Name}  & \\
-    \MyTextField[width=3cm]{Geburtstag}  & 
+    \MyTextField[width=3cm]{Geburtstag}  &
     \MyTextField[width=3cm]{Familienstand}  \\
     \MyTextField[width=5cm, multiline=true, height=1.5cm]{Semesteranschrift} &
     \MyTextField[width=5cm, multiline=true, height=1.5cm]{Heimatanschrift} \\
-    \MyTextField[width=4cm]{Telefonnummer}  & 
+    \MyTextField[width=4cm]{Telefonnummer}  &
     \MyTextField[width=7cm]{Email}  \\
-    \MyTextField[width=0.5cm]{Studiensemester}  & 
+    \MyTextField[width=0.5cm]{Studiensemester}  &
     \MyTextField[width=0.5cm]{Fachsemester}  \\
-    \MyTextField[width=4cm]{Studienbeginn}  & 
+    \MyTextField[width=4cm]{Studienbeginn}  &
     \MyTextField[width=4cm]{Studiengang}  \\
   \end{tabular}
 
@@ -122,7 +123,6 @@ Ich versichere die Richtigkeit der gemachten Angaben.
 \vspace{2cm}
 \begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}%
 \rule{6cm}{1pt} & \rule{7cm}{1pt} \\
-Ort, Datum & Unterschrift 
+Ort, Datum & Unterschrift
 \end{tabular}
 \end{document}
-
