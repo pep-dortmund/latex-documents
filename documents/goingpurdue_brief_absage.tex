@@ -1,0 +1,44 @@
+\documentclass[
+  pepbrief,
+  fontsize=12pt,
+  paper=a4,
+  DIV=14,
+  parskip=half,
+  backaddress=false,
+]{scrlttr2}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+
+
+\author{Henning Moldenhauer}
+\setkomavar{subject}{Bewerbung zum Going Abroad - Purdue}
+
+\begin{document}
+\begin{letter}{%
+  Max Mustermann\\
+  Musterstraße 1\\
+  44227 Dortmund%
+}
+% ANREDE
+\opening{Lieber Max,}
+% BRIEFTEXT
+
+leider kannst du an unserem Going Abroad Programm nicht teilnehmen.
+
+Wir wünschen dir trotzdem weiterhin alles Gute.
+
+% BRIEFSCHLUSS
+\closing{Mit freundlichen Grüßen}
+
+% ANHANG
+\end{letter}
+\end{document}

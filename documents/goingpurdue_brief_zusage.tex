@@ -1,0 +1,47 @@
+\documentclass[
+  pepbrief,
+  fontsize=12pt,
+  paper=a4,
+  DIV=14,
+  parskip=half,
+  backaddress=false,
+]{scrlttr2}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+
+
+\author{Henning Moldenhauer}
+\setkomavar{subject}{Bewerbung zum Going Abroad - Purdue}
+
+\begin{document}
+\begin{letter}{%
+  Max Mustermann\\
+  Musterstraße 1\\
+  44227 Dortmund%
+}
+% ANREDE
+\opening{Lieber Max,}
+% BRIEFTEXT
+
+es freut uns dir mitteilen zu können, dass du an unserem Going Abroad Programm
+teilnehmen kannst und somit die Purdue Universität besuchen wirst.
+
+Anbei erhältst du eine Anleitung in der die nächsten Schritte zur Vorbereitung
+deines Aufenthaltes stehen.
+
+% BRIEFSCHLUSS
+\closing{Mit freundlichen Grüßen}
+
+% ANHANG
+\encl{Anleitung zur Vorbereitung des Programms}
+\end{letter}
+\end{document}
