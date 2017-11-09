@@ -10,9 +10,9 @@ TARGETS=soak_anmeldung \
 	stipendium_aushang \
 	stipendium_initiativ \
 	stipendium_initiativ_vertrag \
-	goingpurdue_brief_absage \
-	goingpurdue_brief_zusage \
-	goingpurdue_anleitung
+	goingabroad/purdue/purdue_brief_absage \
+	goingabroad/purdue/purdue_brief_zusage \
+	goingabroad/purdue/purdue_anleitung
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
