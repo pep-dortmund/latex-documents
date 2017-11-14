@@ -1,0 +1,246 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  parskip=full,
+  headinclude=true,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{graphicx}
+
+\usepackage{microtype}
+
+\usepackage[margin=2cm, bottom=3cm]{geometry}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+
+\usepackage{titling}
+\usepackage{booktabs}
+
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\usepackage{siunitx}
+\usepackage{enumerate}
+
+\renewcommand*{\sectionformat}{\S\thesection\autodot\enskip}
+
+\date{02. Februar 2015}
+
+\newcommand\vorsitzender{Henning Moldenhauer}
+
+% Daten des Stipendiaten
+\newcommand\stipendiat{NAME}		% Name
+\newcommand\stipgeburt{DATUM}		% Geburtsdatum
+\newcommand\stipanschrift{STADT}	% Wohnort
+\newcommand\stipbetrag{0}		% Höhe der Förderung
+\newcommand\stipstart{STARTDATUM}	% Beginn der Förderung
+\newcommand\stipende{ENDDATUM}		% Ende der Förderung
+\newcommand\stipkontoinhaber{}		% Kontodaten auf welches die Förderung
+\newcommand\stipbic{}			% überwiesen werden soll.
+\newcommand\stipiban{}			%
+\newcommand\stipbetreuung{NAME DES KONTAKTES UND INSTITUT}	% Name des Projektbetreuers und Institut
+
+\begin{document}
+  \begin{minipage}{0.45\textwidth}%
+	  \large\bfseries PeP et al.\ e.\,V.\\%
+	  Begabtenförderungsprogramm –\\%
+	  Initiativstipendium%
+  \end{minipage}%
+  \hfill%
+  \begin{minipage}{0.45\textwidth}%
+	\hfill\includegraphics[height=1.5cm]{pep.pdf}
+  \end{minipage}%
+\section*{Stipendienvertrag}
+
+Der Verein
+
+Physikstudierende und ehemalige Physikstudierende\\
+der TechnischenUniversität Dortmund et al. e.V.\\
+Otto-Hahn-Str.~4\\
+44221 Dortmund
+
+vertreten durch den ersten Vorsitzenden \vorsitzender\ nachfoldend
+PeP et al. genannt, vergibt an
+
+Herrn/Frau \stipendiat\\
+Geboren am \stipgeburt\\
+wohnhaft in \stipanschrift
+
+nachfolgend Stipendiat/in genannt ein Stipendium für sein/ihr
+Forschungspraktikum/Auslandssemester/berufsvorbereitendes Praktikum oder
+weitergehende wissenschaftliche Qualifikation.
+PeP et al.\ und der/die Stipendiat/in treffen folgende Vereinbarung über die
+Förderung:
+
+\section{Förderungszweck}
+
+\begin{enumerate}[\qquad(1)]
+	\item Der Verein PeP et al. gewährt dem/der Stipendiaten/in nach
+		Maßgabe der folgenden Regelungen ein Stipendium, das
+		dem/der Stipendiaten/in sein/ihr Forschungspraktikum/
+		Auslandssemester/berufsvorbereitendes Praktikum/weitergehende
+		wissenschaftliche Qualifikation ermöglichen soll.
+		Das Projekt und dessen Ziele werden im Anhang definiert.
+	\item Die Annahme eines Stipendiums begründet kein Arbeits-, Dienst-
+		oder sonstiges Beschäftigungsverhältnis zwischen dem/der
+		Stipendiaten/in und PeP et al.. Es ist kein Entgelt im Sinne
+		§ 14 Sozialgesetzbuch IV. Weder ist der/die Stipendiat/in
+		PeP et al. gegenüber zu einer Arbeitnehmertätigkeit
+		noch zu einer bestimmten Gegenleistung verpflicht.
+		Das Stipendium ist ein Zuschuss zum Lebensunterhalt und
+		keine Gegenleistung für wissenschaftliche Tätigkeit.
+\end{enumerate}
+
+\section{Umfang der Förderung}
+
+\begin{enumerate}[\qquad(1)]
+	\item Der Stipendiengeber gewährt dem/der Stipendiaten/in ein
+		Stipendium in Höhe von \num{\stipbetrag}\,€ pro Monat innerhalb
+		des Zeitraumes vom \stipstart\ bis zum \stipende.
+		Falls der Zeitraum des Stipendiums nicht volle Monate umfasst,
+		wird die Förderung anteilig bestimmt.
+	\item Die Zahlung erfolgt monatlich im Voraus durch Überweisung auf
+		das nachstehend genannte Bankkonto:
+
+		Kontoinhaber: \stipkontoinhaber\\
+		IBAN: \stipiban\\
+		BIC: \stipbic\\
+\end{enumerate}
+
+\section{Pflichten des/der Stipendiaten/in}
+
+\begin{enumerate}[\qquad(1)]
+	\item Der/Die Stipendiat/in verpflichtet sich dazu, sich ernsthaft um die
+		Erreichung des Förderziels zu bemühen. Etwaige Hinderungsgründe sind
+		PeP et al. umgehend zur Kenntnis zu geben.
+	\item Der/Die Stipendiat/in informiert PeP et al. unverzüglich, wenn das
+		Vorhaben unterbrochen, geändert, vorzeitig abgeschlossen oder
+		abgebrochen wird.
+	\item Der/Die Stipendiat/in ist verpflichtet PeP et al. umgehend
+		Mitteilung zu machen, falls ihm/ihr von anderer Stelle eine
+		Studienförderung zugesprochen wird.
+	\item Über den Verlauf und die Ergebnisse der Studien legt der/die
+		Stipendiat/in regelmäßig Zeugnis ab. Der/Die Stipendiat/in
+		hat bei einer Förderdauer von mehr als sechs Monaten nach Ablauf
+		eines halben Jahres gegenüber PeP et al. einen Zwischenbericht
+		von maximal 2 DIN-A4-Seiten über den Stand des Projekts zu
+		erstatten. Bei kürzerer Förderdauer und nach Abschluss der
+		Förderung muss spätestens einen Monat nach Ende der Förderung
+		ein Abschlussbericht von minimal 1 DIN-A4-Seite und maximal
+		3 DIN-A4-Seiten bei der oben genannten Stelle eingehen.
+	\item Übt ein/eine Stipendiat/in neben der Bearbeitung des wissenschaftlichen
+		Vorhabens eine Berufstätigkeit aus, so ist eine Förderung nach diesen
+		Richtlinien ausgeschlossen, sofern es sich nicht um eine Tätigkeit von
+		geringem Umfang handelt.
+		Als Berufstätigkeit von geringem Umfang gilt eine Tätigkeit bis zu zehn
+		Stunden wöchentlich. Der/Die Stipendiat/in hat PeP et al. über
+		jede Berufstätigkeit zu informieren.
+	\item Unterbricht der/die Stipendiat/in sein/ihr wissenschaftliches Vorhaben,
+		so unterrichtet er/sie PeP et al. unverzüglich. Die Zahlung des
+		Stipendiums ist vom Zeitpunkt der Unterbrechung an auszusetzen.
+		\begin{enumerate}[(a)]
+			\item  Zeigt der/die Stipendiat/in das Ende der Unterbrechung
+				an, wird die Zahlung wieder aufgenommen und die
+				Bewilligung um den Zeitraum der Unterbrechung verlängert.
+			\item Bei einer Unterbrechung wegen Krankheit oder aus einem
+				anderen wichtigen, von dem/der Stipendiaten/in nicht
+				zu vertretenden Grund kann das Stipendium bis zu
+				vier Wochen fortgezahlt werden. Eine darüber
+				hinausgehende, längerfristige Unterbrechung,
+				insbesondere Erkrankung ist unverzüglich anzuzeigen.
+		\end{enumerate}
+\end{enumerate}
+
+\section{Verantwortlicher Hochschullehrer}
+
+\begin{enumerate}[\qquad(1)]
+	\item Die Betreuung des Forschungsvorhabens erfolgt durch \stipbetreuung.
+\end{enumerate}
+
+\section{Haftung}
+
+\begin{enumerate}[\qquad(1)]
+	\item Ein gesonderter Versicherungsschutz besteht für den/die
+		Stipendiaten/in nicht.
+		Für schuldhaft verursachte Schäden haftet er/sie selbst.
+		Ihm/Ihr obliegt es, für den entsprechenden Versicherungsschutz
+		zu sorgen.
+\end{enumerate}
+
+\section{Widerruf der Förderung}
+
+\begin{enumerate}[\qquad(1)]
+	\item Die Bewilligung der Förderung kann seitens PeP et al. aufgehoben
+		(zurückgenommen bzw. widerrufen) werden. Ein Aufhebungsgrund
+		liegt insbesondere vor,
+		\begin{enumerate}[(a)]
+			\item wenn die Bewilligung auf unrichtigen oder
+				unvollständigen Angaben seitens des/der
+				Stipendiaten/in beruht.
+			\item wenn der/die Stipendiat/in von öffentlichen oder
+				privaten Einrichtungen eine finanzielle Förderung
+				desselben Vorhabens erhält.
+			\item wenn und ab dem Zeitpunkt, zu dem der/die Stipendiat/in
+				eine Nebentätigkeit aufnimmt, die mit der Förderung
+				nicht vereinbar ist.
+			\item wenn der/die Stipendiat/in im Rahmen des geförderten
+				Vorhabens grob gegen die Regeln guter wissenschaftlicher
+				Praxis verstoßen hat und dies von PeP et al. in einem
+				abgeschlossenen Verfahren nach den Richtlinien
+				der DFG zur Sicherung der guten wissenschaftlichen
+				Praxis in ihrer jeweils geltenden Fassung geltend
+				gemacht worden ist.
+			\item wenn der/die Stipendiat/in seine/ihre sonstigen Pflichten
+				aus dem Stipendium grob verletzt.
+		\end{enumerate}
+	\item Im Falle des Widerrufs der Förderung werden alle Zahlungen mit Wirkung
+		auf den im Widerruf genannten Zeitpunkt eingestellt.
+	\item Der/Die Stipendiat/in ist verpflichtet, im Falle des Widerrufs oder
+		bei Beendigung der Förderung aus anderen Gründen alle über den
+		Zeitpunkt der Beendigung hinaus an ihn/sie gezahlten Beträge
+		PeP et al. zurückzuerstatten.
+	\item Im Falle grober Verletzungen der nach §3 definierten Pflichten
+		des/der Stipendiaten/in ist der/die Stipendiat/in zur Rückzahlung
+		bereits geleisteter Zahlungen verpflichtet.
+\end{enumerate}
+
+\section{Geheimhaltungsverpflichtung}
+
+\begin{enumerate}[\qquad(1)]
+	\item Der/Die Stipendiat/in ist verpflichtet, alle ihm/ihr während
+		seines/ihres Forschungsvorhabens mit PeP et al. ausgetauschten
+		Informationen vertraulich zu behandeln und ohne Absprache
+		Dritten nicht zugänglich zu machen.
+	\item PeP et al. ist verpflichtet, alle ihm vom Stipendiaten gemachten
+		Angaben vertraulich zu behandeln und diese Dritten nicht
+		zugänglich zu machen.
+\end{enumerate}
+
+\section{Schlussbestimmungen}
+
+\begin{enumerate}[\qquad(1)]
+	\item Dieser Vertrag unterliegt dem deutschen Recht.
+	\item Alle Änderungen und Ergänzungen dieses Vertrages bedürfen der
+		Schriftform.
+\end{enumerate}
+
+\vspace{2cm}
+\begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}%
+\rule{6cm}{1pt} & \rule{7cm}{1pt} \\
+Ort, Datum & Unterschrift (Stipendiat/in)\\[2cm]
+ & \rule{7cm}{1pt} \\
+ & Unterschrift (PeP et al.)
+\end{tabular}
+\end{document}
