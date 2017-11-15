@@ -1,0 +1,70 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  parskip=full,
+  headinclude=true,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage[margin=2cm, bottom=3cm]{geometry}
+\usepackage{tabularx}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+  \setkomafont{pagehead}{\normalfont}
+  \setkomafont{pagefoot}{\normalfont\footnotesize}
+  \renewcommand*{\sectionformat}{\S\thesection\autodot\enskip}
+
+
+\begin{document}
+  \thispagestyle{empty}
+
+\begin{center}
+  \underline{Visiting Scholar Information – J Visas}
+\end{center}
+
+\vspace{2em}
+\begin{tabular}{@{}p{.33\textwidth}@{}p{.33\textwidth}@{}p{.34\textwidth}}
+  Name: & & \\
+  & & \\
+  Last \hrulefill \quad & First \hrulefill \quad & Middle \hrulefill \\
+\end{tabular}
+
+\vspace{2em}
+Gender:\quad Male\underline{\hspace{3cm}} \quad Female\underline{\hspace{3cm}}
+
+\vspace{2em}
+\begin{tabular}{@{}p{\textwidth}}
+  Email Address:\quad \hrulefill \\
+\end{tabular}
+
+\vspace{2em}
+\begin{tabular}{@{}p{\textwidth}}
+  Phone Number: \quad \hrulefill \\
+\end{tabular}
+
+\vspace{2em}
+\begin{tabular}{@{}p{5cm}@{}p{1em}@{}p{5cm}}
+  Dates of Visit / Appointment & & \\
+  & & \\
+  Start: \hrulefill & & End: \hrulefill \\
+\end{tabular}
+
+\vspace{2em}
+\begin{tabular}{@{}p{\textwidth}}
+  Statement of reason for visit: \\ \\
+  \hrulefill \\ \\
+  \hrulefill \\ \\
+  \hrulefill \\ \\
+  \hrulefill \\ \\
+\end{tabular}
+
+\end{document}
