@@ -18,9 +18,10 @@ TARGETS=soak_anmeldung \
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
-build/%.pdf: %.tex | build
-	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $^
+build/%.pdf: %.tex FORCE | build
+	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $<
 
+FORCE:
 
 build:
 	mkdir -p build
@@ -28,4 +29,4 @@ build:
 clean:
 	rm -r build
 
-.PHONY: all clean
+.PHONY: all clean FORCE
