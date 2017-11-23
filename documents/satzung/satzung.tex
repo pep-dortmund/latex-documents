@@ -14,6 +14,10 @@
 
 \usepackage[autostyle]{csquotes}
 
+\usepackage{enumitem}
+\setlist[enumerate, 1]{label=(\arabic*), labelindent=2em, itemindent=!, leftmargin=!}
+\setlist[enumerate, 2]{label=(\alph*), parsep=0.5ex}
+
 \usepackage{graphicx}
 
 \renewcommand*\thesection{\S{} \arabic{section}}
@@ -125,11 +129,11 @@
 
 \begin{enumerate}
 	\item Organe des Vereins sind:
-	\begin{enumerate}
-		\item die Mitgliederversammlung,
-		\item der Vorstand,
-		\item die Projektbeauftragten.
-	\end{enumerate}
+    \begin{enumerate}
+      \item die Mitgliederversammlung,
+      \item der Vorstand,
+      \item die Projektbeauftragten.
+    \end{enumerate}
 \end{enumerate}
 
 \section{Mitgliederversammlung}
