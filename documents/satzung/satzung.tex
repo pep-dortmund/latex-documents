@@ -1,38 +1,48 @@
-\documentclass[fontsize=12pt, paper=a4, DIV14, parskip]{scrreprt}
+\documentclass[
+  fontsize=12pt,
+  paper=a4,
+  DIV14,
+  parskip,
+]{scrartcl}
 
-\usepackage[ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{eurosym}
-\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Source Sans Pro}
+\renewcommand\familydefault\sfdefault
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage[autostyle]{csquotes}
+
+\usepackage{enumitem}
+\setlist[enumerate, 1]{label=(\arabic*), labelindent=2em, itemindent=!, leftmargin=!}
+\setlist[enumerate, 2]{label=(\alph*), parsep=0.5ex}
+
 \usepackage{graphicx}
 
-\usepackage[default]{sourcesanspro}
-\usepackage{paralist}
+\renewcommand*\thesection{\S{} \arabic{section}}
 
-\setcounter{secnumdepth}{0}
-%\setcounter{tocdepth}{3}
-%\hypersetup{colorlinks, linkcolor=black}
 
 \begin{document}
 
-\section{Die Vereinssatzung}
+\textbf{\huge Die Vereinssatzung}
 
-\subsection{\S{} 1 Name, Sitz und Geschäftsjahr}
+\section{Name, Sitz und Geschäftsjahr}
 
-\begin{enumerate}[\qquad(1)]
-	\item Der Verein führt den Namen \glqq Physikstudierende und ehemalige
-		Physikstudierende der Technischen Universität Dortmund et al.\grqq, im
-		folgenden \glqq PeP et al.\grqq$\,$genannt. Er ist beim Amtsgericht
+\begin{enumerate}
+  \item Der Verein führt den Namen \enquote{Physikstudierende und ehemalige
+    Physikstudierende der Technischen Universität Dortmund et al.}, im
+    folgenden \enquote{PeP et al.}$\,$genannt. Er ist beim Amtsgericht
 		Dortmund eingetragen. Mit der Eintragung erhält der Verein den Zusatz
-		\glqq e.V.\grqq.
+    \enquote{e.\,V.}.
 	\item Der Verein hat seinen Sitz in Dortmund.
 	\item Das Geschäftsjahr ist das des Kalenderjahres. Für das erste Jahr wird
 		ein Rumpfwirtschaftsjahr gebildet.
 \end{enumerate}
 
-\subsection{\S{} 2 Zweck des Vereins}
+\section{Zweck des Vereins}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Zweck des Vereins ist die Unterstützung der Fakultät Physik der
 		Technischen Universität Dortmund in Forschung und Lehre, sowie die
 		Verbreitung von Erkenntnissen der physikalischen Forschung.
@@ -44,10 +54,10 @@
 		wissenschaftlicher Veranstaltungen.
 \end{enumerate}
 
-\subsection{\S{} 3 Gemeinnützigkeit}
+\section{Gemeinnützigkeit}
 
-\begin{enumerate}[\qquad(1)]
-	\item Der Verein \glqq PeP et al.\grqq$\,$politisch unabhängig und ohne
+\begin{enumerate}
+	\item Der Verein \enquote{PeP et al.} politisch unabhängig und ohne
 		Erwerbsinteressen und verfolgt ausschließlich und unmittelbar gemeinnützige
 		Zwecke im Sinne der §§52ff der Abgabenordnung 1977.
 	\item Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie
@@ -56,10 +66,10 @@
 		werden. Mitglieder erhalten keine Zuwendungen aus Mitteln des Vereins.
 \end{enumerate}
 
-\subsection{\S{} 4 Erwerb der Mitgliedschaft}
+\section{Erwerb der Mitgliedschaft}
 
-\begin{enumerate}[\qquad(1)]
-	\item Der Verein \glqq PeP et al.\grqq$\,$hat ordentliche und
+\begin{enumerate}
+	\item Der Verein \enquote{PeP et al.} hat ordentliche und
 		außerordentliche Mitglieder.
 	\item Ordentliche Mitglieder können alle aktiven und ehemaligen Studierenden,
 		Absolventen, Lehrende, und Angestellte der Fakultät Physik der Technischen
@@ -73,18 +83,18 @@
 		Angabe von Gründen abzulehnen.
 \end{enumerate}
 
-\subsection{\S{} 5 Rechte und Pflichten der Mitglieder}
+\section{Rechte und Pflichten der Mitglieder}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Die Mitglieder sind verpflichtet, die Ziele und Interessen des
 		Vereins zu unterstützen.
 	\item Die Mitglieder sind berechtigt, die Einrichtungen des Vereins zu
 		benutzen und an den Veranstaltungen teilzunehmen.
 \end{enumerate}
 
-\subsection{\S{} 6 Mitgliedsbeiträge}
+\section{Mitgliedsbeiträge}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Es ist ein Jahresbeitrag zu entrichten. Die Höhe des Beitrags und
 		die Zahlungsweise regelt eine von der Mitgliederversammlung beschlossene
 		Beitragsordnung.
@@ -94,9 +104,9 @@
 	\item Eine Aufnahmegebühr wird nicht erhoben.
 \end{enumerate}
 
-\subsection{\S{} 7 Beendigung der Mitgliedschaft}
+\section{Beendigung der Mitgliedschaft}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Die ordentliche und außerordentliche Mitgliedschaft im Verein endet
 		durch freiwilligen Austritt, Ausschluss oder Tod jeweils zum Ende eines
 		Kalenderjahres.
@@ -104,38 +114,38 @@
 		den Vorstand.
 	\item Bei Vorliegen schwerwiegender Gründe kann ein Mitglied durch die
 		Mitgliederversammlung mit sofortiger Wirkung ausgeschlossen werden,
-		wenn z.B. eine Schädigung des Ansehens des Vereins vorliegt.\\
+		wenn z.B. eine Schädigung des Ansehens des Vereins vorliegt.
 		Vor der Beschlussfassung zum Ausschluss durch den Vorstand ist dem
 		Mitglied Gelegenheit zu geben, sich innerhalb einer angemessenen Frist
 		zu rechtfertigen. Der Ausschließungsbeschluss ist dem Mitglied schriftlich
 		zuzustellen. Innerhalb von 14 Tagen nach Zustellung kann das Mitglied
-		hiergegen Einspruch erheben.\\
+		hiergegen Einspruch erheben.
 		Über den Einspruch entscheidet der Vorstand. Erst nach der Entscheidung
 		des Vorstandes kann das Mitglied die Rechtsmäßigkeit des Ausschlusses im
 		ordentlichen Rechtsweg überprüfen lassen.
 \end{enumerate}
 
-\subsection{\S{} 8 Organe des Vereins}
+\section{Organe des Vereins}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Organe des Vereins sind:
-	\begin{enumerate}[(a)]\itemsep-12pt
-		\item die Mitgliederversammlung,
-		\item der Vorstand,
-		\item die Projektbeauftragten.
-	\end{enumerate}
+    \begin{enumerate}
+      \item die Mitgliederversammlung,
+      \item der Vorstand,
+      \item die Projektbeauftragten.
+    \end{enumerate}
 \end{enumerate}
 
-\subsection{\S{} 9 Mitgliederversammlung}
+\section{Mitgliederversammlung}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Oberstes Organ ist die Mitgliederversammlung. Soweit nicht in dieser
 		Satzung ausdrücklich andere Zuständigkeiten geregelt sind, ist die
 		Mitgliederversammlung für alle Angelegenheiten des Vereins zuständig.
-	\item Alle ordentlichen Mitglieder des Vereins \glqq PeP et al.\grqq$\,$sind
+	\item Alle ordentlichen Mitglieder des Vereins \enquote{PeP et al.} sind
 		in der Mitgliederversammlung antrags- und stimmberechtigt. Die
 		Mitgliederversammlung beschließt über:
-	\begin{enumerate}[(a)]\itemsep-12pt
+	\begin{enumerate}
 		\item Entgegennahme der Berichte des Vorstandes und des Kassenprüfers,
 		\item Entlastung des Vorstandes,
 		\item Wahl des Vorstandes,
@@ -156,7 +166,7 @@
 	\item Über die Mitgliederversammlung und die in ihr getroffenen Beschlüsse
 		ist ein schriftliches Protokoll auszufertigen, welches durch den
 		Versammlungsleiter und den Protokollführer zu unterzeichnen ist. Dieses
-		Protokoll ist allen Mitgliedern des Vereins \glqq PeP et al.\grqq$\,$in
+		Protokoll ist allen Mitgliedern des Vereins \enquote{PeP et al.} in
 		schriftlicher oder elektronischer Form zugänglich zu machen.
 	\item Bei Abstimmung und Wahlen entscheidet die einfache Stimmenmehrheit
 		der abgegebenen gültigen Stimmen der anwesenden ordentlichen Mitglieder.
@@ -173,9 +183,9 @@
 		Mitglieder einberufen werden und muss dem Vorstand angezeigt werden.
 \end{enumerate}
 
-\subsection{\S{} 10 Vorstand}
+\section{Vorstand}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Der Vorstand im Sinne des §26 BGB besteht aus dem Vorsitzenden, dem
 		stellvertretenden Vorsitzenden und dem Finanzreferenten.\\
 		Die Vertretungsmacht des Vorstandes ist mit Wirkung gegen Dritte in der
@@ -191,8 +201,8 @@
 		Mitgliederversammlungen eine Wahl erforderlich, so kann sie schriftlich
 		erfolgen. Als Wahlperiode gilt dann die Zeit bis zur nächsten
 		Mitgliederversammlung.
-	\item Zur konkreten Durchführung von Veranstaltungen im Namen von \glqq PeP
-		et al.\grqq$\,$kann die Mitgliederversammlung Positionen für
+	\item Zur konkreten Durchführung von Veranstaltungen im Namen von \enquote{PeP
+		et al.} kann die Mitgliederversammlung Positionen für
 		Projektbeauftragte im Vorstand einrichten. Die Projektbeauftragten haben
 		Stimmrecht im Vorstand.
 	\item In Sitzungen, zu denen der Vorstand oder einer seiner Stellvertreter
@@ -202,9 +212,9 @@
 		Vorstandsmitglieder gefasst.
 \end{enumerate}
 
-\subsection{\S{} 11 Projektbeauftragte}
+\section{Projektbeauftragte}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Die Projektbeauftragten werden von der Mitgliederversammlung gewählt.
 	\item Bleiben Posten für Projektbeauftragte vakant, kann die
 		Mitgliederversammlung den Vorstand damit beauftragen einen geeigneten
@@ -217,30 +227,30 @@
 	\item Die Projektbeauftragten können durch die Mitgliederversammlung mit
 		finanziellen Vollmachten im Rahmen der für das jeweilige Projekt nötigen
 		Aufwendungen ausgestattet werden.
-		\begin{enumerate}[(a)]\itemsep-12pt
+		\begin{enumerate}
 			\item In diesem Falle hat der Projektbeauftragte Rechenschaft über die
 				getätigten Transaktionen abzulegen.
 		\end{enumerate}
 \end{enumerate}
 
-\subsection{\S{} 12 Satzungsänderung und Auflösung des Vereins}
+\section{Satzungsänderung und Auflösung des Vereins}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Satzungsänderungen und Auflösung können von der Mitgliederversammlung
 		nur beschlossen werden, wenn bei Einberufung der Mitgliederversammlung
 		gemäß §9 (3) und §9 (10) hierauf besonders hingewiesen wurde und wenn eine
 		3/4 Mehrheit aller abgegebenen Stimmen dafür eintritt.
-	\item Im Falle der Auflösung oder Aufhebung des Vereins \glqq PeP et
-		al.\grqq$\,$oder bei Wegfall seines steuerbegünstigten Zweckes fällt
+	\item Im Falle der Auflösung oder Aufhebung des Vereins \enquote{PeP et
+		al.} oder bei Wegfall seines steuerbegünstigten Zweckes fällt
 		etwaiges Vereinsvermögen an die Gesellschaft der Freunde der Universität
 		Dortmund e.V. (Sitz: Märkische Str. 120, 44141 Dortmund) unter der Auflage
-		das etwaige Vereinsvermögen von \glqq PeP et al.\grqq$\,$ausschließlich und
+		das etwaige Vereinsvermögen von \enquote{PeP et al.} ausschließlich und
 		unmittelbar für steuerbegünstigte Zwecke zu verwenden.
 \end{enumerate}
 
-\subsection{\S{} 13 Schlussbestimmung}
+\section{Schlussbestimmung}
 
-\begin{enumerate}[\qquad(1)]
+\begin{enumerate}
 	\item Die Satzung wurde von der Mitgliederversammlung des Vereins am
 		15.12.2007 in Dortmund beschlossen und tritt mit Eintragung in das
 		Handelsregister Dortmund in Kraft.
