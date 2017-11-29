@@ -1,0 +1,54 @@
+\documentclass[
+  pepbrief,
+  fontsize=12pt,
+  paper=a4,
+  DIV=14,
+  parskip=half,
+  backaddress=false,
+]{scrlttr2}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{csquotes}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+% Stipenditandaten
+\newcommand\stipyear{2018}            % Jahr des Programms
+\newcommand\stipendiat{VORNAME NAME}  % Name des Stipendiaten
+\newcommand\stipstart{STARTDATUM}     % Beginn der Förderung
+\newcommand\stipende{ENDDATUM}        % Ende der Förderung
+
+% PeP Daten
+\newcommand\vorsitzender{Henning Moldenhauer}
+
+\setkomavar{subject}{Art der Förderung des PeP Programms \enquote{Going Abroad} \stipyear}
+
+\begin{document}
+\begin{letter}{%
+  Max Mustermann\\
+  Musterstraße 1\\
+  44227 Dortmund%
+}
+% ANREDE
+\opening{Sehr geehrte Damen und Herren}
+
+% BRIEFTEXT
+Das von PeP et al. e.V. gewährte Stipendium für \stipendiat\ im Rahmen des Programms \enquote{Going Abroad} vom \stipstart\ bis \stipende\ stellt keine Leistungs- oder Begabtenförderung in diesem Sinne dar.
+Der/die oben genannte Stipendiat/in erhält von PeP et al. e.V. lediglich einmalig gezahlte Zuschüsse zu anfallenden Reisekosten und einem Visaantrag.
+Es gibt keine monatlichen Zahlungen zur freien Verfügung des/der Stipendiaten/in.
+
+% BRIEFSCHLUSS
+\closing{Mit freundlichen Grüßen}
+\begin{tabular}{@{}p{0.5\textwidth}@{}p{0.47\textwidth}@{}}%
+\rule{6cm}{1pt} & \rule{7cm}{1pt} \\
+Ort, Datum & \vorsitzender\ (PeP et al.) \\[2cm]
+\end{tabular}
+
+\end{letter}
+\end{document}
