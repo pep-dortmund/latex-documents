@@ -1,0 +1,32 @@
+\RequirePackage{luatex85}
+\documentclass[margin=0.1cm]{standalone}
+
+\usepackage{fontspec}
+\setmainfont[BoldFont=Akkurat Office]{Akkurat Light Office}
+\newfontfamily{\logo}{Arial}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{xcolor}
+\definecolor{tu}{RGB}{131,184,23}
+\definecolor{physik}{RGB}{8,81,162}
+
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\parbox[c][1.8cm][c]{3.2cm}{%
+  \bfseries\itshape\logo\fontsize{58}{58}\selectfont%
+  \textcolor{tu}{f}%
+  \textcolor{physik}{(}%
+  \textcolor{tu}{p}%
+  \textcolor{physik}{)}%
+}%
+\parbox[c][1.8cm][c]{3.6cm}{%
+  \raggedleft\normalfont%
+  \fontsize{16}{18}\selectfont%
+  fakultät\hspace*{1.5em} \\
+  physik
+}%
+\end{document}
