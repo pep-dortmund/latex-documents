@@ -55,6 +55,7 @@
 \definecolor{grau}{rgb}{0.830,0.865,0.857}
 
 \RequirePackage{xparse}
+\RequirePackage{amssymb}
 
 \RequirePackage{graphicx}
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
@@ -120,16 +121,20 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 	\end{tabu}
 \end{center}
 
-{\small
-Wir sind wegen Förderung der Volks- und Berufsbildung,
-einschließlich der Studentenhilfe,
-nach dem letzten uns zugegangenen Freistellungsbescheid des Finanzamtes Dortmund-Ost,
-StNr. 317/5941/4882, vom 16.07.2012 als gemeinnützig anerkannt
-und für die Jahre 2009 bis 2011 nach §\,5 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes
-von der Körperschaftsteuer befreit.
+Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\square$\quad Nein $\boxtimes$
 
-Es wird bestätigt, dass die Zuwendung nur zur Förderung der Volks- und Berufsbildung,
-einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu §\,48 Abs.~2 Einkommensteuer-Durchführungsverordnung – Abschnitt A Nr.~4), verwendet wird.}
+{\footnotesize  
+Wir sind wegen Förderung der Volks- und Berufsbildung sowie der
+Studentenhilfe nach dem Freistellungsbescheid bzw. nach der Anlage zum
+Körperschaftsteuerbescheid des Finanzamtes Dortmund-Ost, StNr. 317/5941/4882,
+vom 29.10.2015 für den letzten Veranlagungszeitraum 2012 bis 2014 nach §\,5
+Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer  und
+nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer  befreit. 
+
+Es wird bestätigt, dass die Zuwendung nur zur Förderung der Volks- und
+Berufsbildung einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu
+§\,48 Abs.~2 Einkommensteuer-Durchführungsverordnung – Abschnitt A Nr.~4)
+verwendet wird.}
 
 \vspace{0.5cm}
 Dortmund, den \@date\\[1cm]
@@ -140,8 +145,14 @@ Vorstand PeP et al.\ e.\,V.\
 {\footnotesize
 Hinweis:
 
-Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden, haftet für die Steuer, die dem Fiskus durch einen etwaigen Abzug der Zuwendungen bei Zuwendenden entgeht (§10b Abs. 4 EStG, §9 Abs. 3 KStG, §9 Nr. 5 GewStG).
+Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung
+erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der
+Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden,
+haftet für die Steuer, die dem Fiskus durch einen etwaigen Abzug der
+Zuwendungen bei Zuwendenden entgeht (§\,10b Abs.~4 EStG, §\,9 Abs.~3 KStG,
+§\,9 Nr.5 GewStG).
 
-Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als 5 Jahre bzw.\ das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit Ausstellung der Bestätigung zurückliegt (BMF vom 15.12.1994 – BStBI I S.~884)
-}
-}
+Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung
+der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als
+5 Jahre bzw.\ das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit
+Ausstellung der Bestätigung zurückliegt (§\,63 Abs.~5 AO). } }
