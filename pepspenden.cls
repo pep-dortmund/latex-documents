@@ -61,9 +61,9 @@
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
 
 \newcommand\vorsitzender{%
-  Henning Moldenhauer\\
-  Holsteiner Straße 33\\
-  44145 Dortmund%
+  Lena Linhoff\\
+  Zechenstraße 136\\
+  44149 Dortmund%
 }
 
 \ihead{%
