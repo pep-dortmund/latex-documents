@@ -126,8 +126,8 @@ Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\squar
 {\footnotesize  
 Wir sind wegen Förderung der Volks- und Berufsbildung sowie der
 Studentenhilfe nach dem Freistellungsbescheid bzw. nach der Anlage zum
-Körperschaftsteuerbescheid des Finanzamtes Dortmund-Ost, StNr. 317/5941/4882,
-vom 29.10.2015 für den letzten Veranlagungszeitraum 2012 bis 2014 nach §\,5
+Körperschaftsteuerbescheid des Finanzamtes Dortmund-Hörde, StNr. 315/5791/2796,
+vom 27.07.2018 für den letzten Veranlagungszeitraum 2015 bis 2017 nach §\,5
 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer  und
 nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer  befreit. 
 
