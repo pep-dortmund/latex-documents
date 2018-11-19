@@ -4,12 +4,12 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=Bestaetigung_Unternehmen \
+	Angebot_Unternehmen
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
 build/%.pdf: %.tex | build
-	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $^
-
+	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $<
 
 build:
 	mkdir -p build
