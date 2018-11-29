@@ -4,6 +4,7 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=Bestaetigung_Unternehmen \
+	Rechnung_Unternehmen \
 	Angebot_Unternehmen
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
