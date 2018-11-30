@@ -10,6 +10,7 @@ TARGETS=soak_anmeldung \
 	stipendium_aushang \
 	stipendium_initiativ \
 	stipendium_initiativ_vertrag \
+	stipendium_projekt_vertrag \
 	mindstorms_ausleihe \
 	goingabroad/purdue/purdue_brief_absage \
 	goingabroad/purdue/purdue_brief_zusage \
