@@ -44,7 +44,9 @@
 \newcommand\stipendiat{NAME}		% Name
 \newcommand\stipgeburt{DATUM}		% Geburtsdatum
 \newcommand\stipanschrift{STADT}	% Wohnort
-\newcommand\stipbetrag{0}		% Höhe der Förderung
+\newcommand\stipbetrag{GESAMTBETRAG}	% Gesamthöhe der Förderung
+\newcommand\stiptagessatz{60}		% Tagessatz
+\newcommand\stiptage{ANZAHL FÖRDERTAGE}	% Anzahl der geförderten Tage
 \newcommand\stipstart{STARTDATUM}	% Beginn der Förderung
 \newcommand\stipende{ENDDATUM}		% Ende der Förderung
 \newcommand\stipkontoinhaber{}		% Kontodaten auf welches die Förderung
@@ -56,7 +58,7 @@
   \begin{minipage}{0.45\textwidth}%
 	  \large\bfseries PeP et al.\ e.\,V.\\%
 	  Begabtenförderungsprogramm –\\%
-	  Projektstipendium%
+	  Initiativstipendium%
   \end{minipage}%
   \hfill%
   \begin{minipage}{0.45\textwidth}%
@@ -105,7 +107,7 @@ Förderung:
 \begin{enumerate}[\qquad(1)]
 	\item Der Stipendiengeber gewährt dem/der Stipendiaten/in ein
 		Stipendium in Höhe von einmalig \num{\stipbetrag}\,€ für
-		den Projektzeitraum vom \stipstart\ bis zum \stipende.
+		den Projektzeitraum vom \stipstart\ bis zum \stipende. Dies berechnet sich aus einem Tagessatz von \num{\stiptagessatz}\,€ für \num{\stiptage} Tage.
 	\item Die Zahlung erfolgt einmalig im Voraus durch Überweisung auf
 		das nachstehend genannte Bankkonto:
 
