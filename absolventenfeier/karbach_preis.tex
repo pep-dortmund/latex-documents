@@ -8,6 +8,23 @@
 \usepackage{polyglossia}
 \setmainlanguage{german}
 
+% Mathematik
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{cancel}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  partial=upright,
+  nabla=upright,
+  mathrm=sym,
+]{unicode-math}
+\setmathfont{Fira Math}
+\setmathfont{XITS Math}[range={scr, bfscr}]
+\setmathfont{XITS Math}[range={cal, bfcal}, StylisticSet=1]
+
 \usepackage{csquotes}
 \usepackage{fontawesome5}
 
@@ -47,7 +64,7 @@
 
       für eine herausragende Promotion im Bereich der Teilchenphysik
       oder des Wissenschaftlichen Rechnens/High Performance Computings\\
-      des Jahres 2016
+      des Jahres 2018
 
       an
 
@@ -55,7 +72,7 @@
 
       mit der Dissertationsschrift
 
-      {\Large \enquote{#2}}
+      {\LARGE \enquote{#2}}
   \end{center}
 
 
