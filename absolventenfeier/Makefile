@@ -4,6 +4,7 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=reserviert \
+		laecheln_und_winken
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
