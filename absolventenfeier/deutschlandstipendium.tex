@@ -1,0 +1,93 @@
+\documentclass[parskip=full, fontsize=11pt]{scrartcl}
+
+\usepackage[margin=1.5cm, left=6.5cm, top=5cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Akkurat Office}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{csquotes}
+\usepackage{fontawesome5}
+
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\usepackage{tikz}
+
+\usepackage{xcolor}
+\definecolor{tu}{RGB}{131,184,23}
+\definecolor{physik}{RGB}{8,81,162}
+\usepackage{xparse}
+
+
+\NewDocumentCommand\urkunde{s m}{%
+  \begin{tikzpicture}[remember picture, overlay, shift=(current page.north west)]
+    \fill[tu] (1.5cm, 0) rectangle (5.5cm, -\paperheight);
+    \node[anchor=center, inner sep=0pt] at (3.5cm, -3cm) {%
+      \includegraphics[width=3.8cm]{schwingung_positiv_white.pdf}
+    };
+  \end{tikzpicture}
+
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Stipendium}
+
+    \vspace{1.0cm}
+
+    {\Large%
+      Der Verein der Physikstudierenden und ehemaligen Physikstudierenden
+      \enquote{PeP et al. e.\,V.}
+      verleiht
+
+      \IfBooleanTF{#1}{Frau}{Herrn}
+
+      {\Huge\bfseries #2}
+
+
+      im Rahmen des Begabtenförderungsprogramms ein Deutschland-Stipendium.
+
+    }
+  \end{center}
+
+  \vfill
+
+  \large%
+  Dortmund, 2. März 2019
+
+  \vspace{2cm}
+
+  \begin{minipage}{0.45\textwidth}
+    Marie Schmitz\\
+    \color{darkgray}
+    1. Vorsitzende\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+  \hfill%
+  \begin{minipage}{0.45\textwidth}
+    Kevin Heinicke\\
+    \color{darkgray}
+    2. Vorsitzender\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}%
+    \hfill%
+    \includegraphics[height=1.4cm]{pep.pdf}
+  \end{center}
+  \newpage
+}
+
+
+\date{2. März 2019}
+  
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  \urkunde{Max Mustermann}
+  \urkunde*{Marie Musterfrau}
+\end{document}
