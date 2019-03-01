@@ -1,0 +1,88 @@
+\documentclass[parskip=full, fontsize=11pt]{scrartcl}
+
+\usepackage[margin=1.5cm, left=6.5cm, top=3cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Akkurat Office}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{csquotes}
+\usepackage{fontawesome5}
+
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\usepackage{tikz}
+
+\usepackage{xcolor}
+\definecolor{tu}{RGB}{131,184,23}
+\definecolor{physik}{RGB}{8,81,162}
+\usepackage{xparse}
+
+
+\NewDocumentCommand\urkunde{m m}{%
+  \begin{tikzpicture}[remember picture, overlay, shift=(current page.north west)]
+    \fill[tu] (1.5cm, 0) rectangle (5.5cm, -\paperheight);
+    \node[anchor=center, inner sep=0pt] at (3.5cm, -3cm) {%
+      \includegraphics[width=3.8cm]{schwingung_positiv_white.pdf}
+    };
+  \end{tikzpicture}
+
+  \Large%
+
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Urkunde}
+
+    \vspace{1.0cm}
+
+      Die Fakultät Physik\\
+      der Technischen Universität Dortmund
+
+      verleiht den
+
+      {\Huge\bfseries Till-Moritz-Karbach-Preis}
+
+      für eine herausragende Promotion im Bereich der Teilchenphysik
+      oder des Wissenschaftlichen Rechnens/High Performance Computings\\
+      des Jahres 2016
+
+      an
+
+      {\Huge\bfseries #1}
+
+      mit der Dissertationsschrift
+
+      {\Large \enquote{#2}}
+  \end{center}
+
+
+  \vfill
+
+  \large%
+  Dortmund, 2. März 2019\\[2cm]
+  Prof.~Dr. Frithjof Anders\\
+  \color{darkgray}
+  Dekan\\
+  Fakultät Physik
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}%
+    \hfill%
+    \includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
+  \end{center}
+  \newpage
+}
+
+
+\date{2. März 2019}
+  
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  \urkunde{Herrn Dr.~Max~Mustermann}{bla}
+\end{document}
