@@ -4,7 +4,11 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=reserviert \
-		laecheln_und_winken
+	laecheln_und_winken\
+	moderationskarten \
+	vegan \
+	vegetarisch \
+	glutenfrei
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
