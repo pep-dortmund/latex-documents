@@ -1,36 +1,9 @@
-\documentclass[parskip=full, fontsize=11pt]{scrartcl}
-
-\usepackage[margin=1.5cm, left=6.5cm, top=5cm]{geometry}
-
-\usepackage{fontspec}
-\setmainfont{Akkurat Office}
-
-\usepackage{polyglossia}
-\setmainlanguage{german}
+\documentclass{pepurkunde}
 
 \usepackage{csquotes}
-\usepackage{fontawesome5}
-
-\usepackage{graphicx}
-
-\pagestyle{empty}
-
-\usepackage{tikz}
-
-\usepackage{xcolor}
-\definecolor{tu}{RGB}{131,184,23}
-\definecolor{physik}{RGB}{8,81,162}
-\usepackage{xparse}
 
 
 \NewDocumentCommand\urkunde{s m}{%
-  \begin{tikzpicture}[remember picture, overlay, shift=(current page.north west)]
-    \fill[tu] (1.5cm, 0) rectangle (5.5cm, -\paperheight);
-    \node[anchor=center, inner sep=0pt] at (3.5cm, -3cm) {%
-      \includegraphics[width=3.8cm]{schwingung_positiv_white.pdf}
-    };
-  \end{tikzpicture}
-
   \begin{center}
     \textbf{\fontsize{36}{40}\selectfont Stipendium}
 

@@ -8,7 +8,10 @@ TARGETS=reserviert \
 	moderationskarten \
 	vegan \
 	vegetarisch \
-	glutenfrei
+	glutenfrei \
+	karbach_preis \
+	beste_fuenf_prozent \
+	deutschland_stipendien
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
