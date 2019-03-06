@@ -1,0 +1,70 @@
+\documentclass{pepurkunde}
+
+\usepackage{csquotes}
+
+\NewDocumentCommand\urkunde{s m}{%
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Urkunde}
+
+    \vspace{1.0cm}
+
+    {\Large%
+      Die Fakultät Physik und
+      der Verein der Physikstudierenden und ehemaligen Physikstudierenden
+      \enquote{PeP et al. e.\,V.}
+      gratulieren
+      
+      \IfBooleanTF{#1}{Frau}{Herrn}
+
+      {\Huge\bfseries #2}
+
+
+      zu \IfBooleanTF{#1}{ihrem}{seinem} hervorragenden Abschluss,\\
+      der zu den besten 5\,\% \IfBooleanTF{#1}{ihres}{seines} Jahrgangs zählt.
+
+    }
+  \end{center}
+
+  \vfill
+
+  \large%
+  Dortmund, 2. März 2019
+
+  \vspace{2cm}
+
+  \begin{minipage}{0.45\textwidth}
+    Prof.~Dr. Frithjof Anders\\
+    \color{darkgray}
+    Dekan\\
+    Fakultät Physik
+  \end{minipage}
+  \hfill%
+  \begin{minipage}{0.45\textwidth}
+    Marie Schmitz\\
+    \color{darkgray}
+    Vorsitzende\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}%
+    \hfill%
+    \includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
+    \includegraphics[height=1.4cm]{pep.pdf}
+  \end{center}
+  \newpage
+}
+
+
+\date{2. März 2019}
+  
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  %%% WICHTIG %%%
+  % Aus Datenschutzgründen die echten Namen nicht commiten!
+  \urkunde{Max Mustermann}
+  \urkunde*{Marie Musterfrau}
+\end{document}

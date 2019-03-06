@@ -1,0 +1,67 @@
+\documentclass{pepurkunde}
+
+\usepackage{csquotes}
+
+
+\NewDocumentCommand\urkunde{s m}{%
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Stipendium}
+
+    \vspace{1.0cm}
+
+    {\Large%
+      Der Verein der Physikstudierenden und ehemaligen Physikstudierenden
+      \enquote{PeP et al. e.\,V.}
+      verleiht
+
+      \IfBooleanTF{#1}{Frau}{Herrn}
+
+      {\Huge\bfseries #2}
+
+
+      im Rahmen des Begabtenförderungsprogramms ein Deutschland-Stipendium.
+
+    }
+  \end{center}
+
+  \vfill
+
+  \large%
+  Dortmund, 2. März 2019
+
+  \vspace{2cm}
+
+  \begin{minipage}{0.45\textwidth}
+    Marie Schmitz\\
+    \color{darkgray}
+    1. Vorsitzende\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+  \hfill%
+  \begin{minipage}{0.45\textwidth}
+    Kevin Heinicke\\
+    \color{darkgray}
+    2. Vorsitzender\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}\\[0.25cm]
+    \includegraphics[height=1.4cm]{pep.pdf}
+  \end{center}
+  \newpage
+}
+
+
+\date{2. März 2019}
+  
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  %%% WICHTIG %%%
+  % Aus Datenschutzgründen die echten Namen nicht commiten!
+  \urkunde{Max Mustermann}
+  \urkunde*{Marie Musterfrau}
+\end{document}

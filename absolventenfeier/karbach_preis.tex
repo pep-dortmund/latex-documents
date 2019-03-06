@@ -1,0 +1,82 @@
+\documentclass{pepurkunde}
+
+% Mathematik
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{cancel}
+
+\usepackage[
+  math-style=ISO,
+  bold-style=ISO,
+  partial=upright,
+  nabla=upright,
+  mathrm=sym,
+]{unicode-math}
+\setmathfont{Fira Math}
+\setmathfont{XITS Math}[range={scr, bfscr}]
+\setmathfont{XITS Math}[range={cal, bfcal}, StylisticSet=1]
+
+\usepackage{csquotes}
+
+
+\NewDocumentCommand\urkunde{m m}{%
+  \Large%
+
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Urkunde}
+
+    \vspace{1.0cm}
+
+      Die Fakultät Physik\\
+      der Technischen Universität Dortmund
+
+      verleiht den
+
+      {\Huge\bfseries Till-Moritz-Karbach-Preis}
+
+      % Sonderfall für 2018, falls normal
+      % für die beste mit Auszeichnung bewertete Promotion
+      für eine herausragende Promotion im Bereich der Teilchenphysik
+      oder des Wissenschaftlichen Rechnens/High Performance Computings\\
+      des Jahres 2018
+
+      an
+
+      {\Huge\bfseries #1}
+
+      mit der Dissertationsschrift
+
+      {\LARGE \enquote{#2}}
+  \end{center}
+
+
+  \vfill
+
+  \large%
+  Dortmund, 2. März 2019\\[2cm]
+  Prof.~Dr. Frithjof Anders\\
+  \color{darkgray}
+  Dekan\\
+  Fakultät Physik
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}%
+    \hfill%
+    \includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
+  \end{center}
+  \newpage
+}
+
+
+\date{2. März 2019}
+  
+\begin{document}
+%%% WICHTIG %%%
+% Aus Datenschutzgründen die echten Namen nicht commiten!
+\urkunde{Herrn Dr.~Max~Mustermann}{%
+  Wiederentdeckung der Maxwellschen Formel $\nabla \cdot \symbf{B} = 0$
+}
+\end{document}
