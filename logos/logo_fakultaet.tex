@@ -1,5 +1,16 @@
 \RequirePackage{luatex85}
-\documentclass[margin=0.1cm]{standalone}
+\documentclass{minimal}
+
+\usepackage[
+  paperwidth=7cm,
+  paperheight=2cm,
+  margin=0.1cm,
+]{geometry}
+\usepackage[a-3u]{pdfx}
+% for pdf/a compliance, see https://tex.stackexchange.com/a/474336/59716
+\pdfvariable omitcidset=1
+
+\PassOptionsToPackage{luatex}{xcolor}
 
 \usepackage{fontspec}
 \setmainfont[BoldFont=Akkurat Office]{Akkurat Light Office}
@@ -9,13 +20,10 @@
 \setmainlanguage{german}
 
 \usepackage{xcolor}
-\definecolor{tu}{RGB}{131,184,23}
+\definecolor{tu}{RGB}{132,184,24}
 \definecolor{physik}{RGB}{8,81,162}
 
-\setlength{\parindent}{0em}
-
 \begin{document}
-
 \parbox[c][1.8cm][c]{3.2cm}{%
   \bfseries\itshape\logo\fontsize{58}{58}\selectfont%
   \textcolor{tu}{f}%
