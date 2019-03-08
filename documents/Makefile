@@ -6,6 +6,7 @@ TEXOPTS= --lualatex \
 TARGETS=soak_anmeldung \
 	brief \
 	mitgliedsantrag \
+	mitgliedsantrag_a5 \
 	stipendium_antrag \
 	stipendium_aushang \
 	stipendium_initiativ \
