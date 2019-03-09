@@ -5,7 +5,10 @@ TEXOPTS= --lualatex \
 
 TARGETS=Bestaetigung_Unternehmen \
 	Rechnung_Unternehmen \
-	Angebot_Unternehmen
+	Angebot_Unternehmen \
+	Handzettel_00_Unternehmen \
+	Handzettel_01_Anfahrtsskizze \
+	Handzettel_02_Messeplan
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
