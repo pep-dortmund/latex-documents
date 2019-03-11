@@ -1,29 +1,19 @@
-%\addrentry{Name} % #1
-%         {Vorname} % #2
-%         {Adresse} % #3
-%         {Messeplan} % #4
-%         {Geschlecht} % #5
-%         {Kontakt} % #6
-%         {WLAN-Schlüssel} % #7
-%         {Firma} % #8
-%         {Kürzel} % #9
-
-\addrentry{Mustermann}
-         {Max}
-         {Musterstraße 1\\12345 Musterhausen}
-         {A1}
-         {m}
-         {Henning Moldenhauer}
-         {123abc}
-         {Musterfirma A}
+\addrentry{Mustermann} %Name
+         {Max} %Vorname
+         {Musterstraße 1\\12345 Musterhausen} %Adresse
+         {A1} %Messeplan
+         {m} %Geschlecht
+         {Henning Moldenhauer} %Kontakt
+         {123abc} %WLAN-Schlüssel
+         {Musterfirma A} %Firma
          {Kürzel}
 
-\addrentry{Musterfrau}
-         {Mona}
-         {Musterstraße 2\\12345 Musterhausen}
-         {C2}
-         {f}
-         {Lena Linhoff}
-         {456def}
-         {MusterGmBh X}
+\addrentry{Musterfrau} %Name
+         {Mona} %Vorname
+         {Musterstraße 2\\12345 Musterhausen} %Adresse
+         {C2} %Messeplan
+         {f} %Geschlecht
+         {Lena Linhoff} %Kontakt
+         {456def} %WLAN-Schlüssel
+         {MusterGmBh XYZ} %Firma
          {Kürzel}
