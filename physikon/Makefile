@@ -7,8 +7,9 @@ TARGETS=Bestaetigung_Unternehmen \
 	Rechnung_Unternehmen \
 	Angebot_Unternehmen \
 	Handzettel_00_Unternehmen \
-	Handzettel_01_Anfahrtsskizze \
-	Handzettel_02_Messeplan
+	Handzettel_01_Ablauf \
+	Handzettel_02_Anfahrtsskizze \
+	Handzettel_03_Messeplan
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
