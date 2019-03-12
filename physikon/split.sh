@@ -23,7 +23,7 @@ while [ "$count" -gt "$counter" ]; do
   end=$((start + pagesper - 1));
   line=$((8 + 10*counter));
 
-  company=$(sed -n "${line}p" $adressbook | awk '$3 == "%Firma" {print toupper(substr($1,2,3))}')
+  company=$(sed -n "${line}p" $adressbook | awk '{print toupper(substr($1,2,3))}')
 
   counterstring=$(printf %04d "$counter")
   messebrief="Messebrief_${counterstring}_${company}.pdf"
