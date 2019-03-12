@@ -22,3 +22,11 @@ Enthalten sein muss:
   nur mit negativem Betrag. Die Stornorechnung hat eine neue Rechnungsnummer.
 - Anschließend die Rechnung neu Ausstellen. Die neue Rechnung hat ebenfalls
   wieder eine eigene Rechnungsnummer.
+
+# Benutzung von split.sh
+
+Kann mit
+```
+sh split.sh
+```
+benutzt werden. Dann werden alle Messebriefe in `build/Messebriefe` erstellt. Benötigt wird `pdftk`.
