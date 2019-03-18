@@ -62,12 +62,12 @@
 
 \newcommand\vorsitzender{%
   Lena Linhoff\\
-  Zechenstraße 136\\
-  44149 Dortmund%
+  Otto-Hahn-Straße 4a\\
+  44227 Dortmund%
 }
 
 \ihead{%
-  \textbf{\Large PEP et al.\ e.\,V.} \\
+  \textbf{\Large PeP et al.\ e.\,V.} \\
 	Bestätigung über Geldzuwendungen%
 }
 
@@ -75,7 +75,7 @@
 
 \ifoot{%
   \parbox[c]{5cm}{%
-    PEP et al.\ e.\,V.\\
+    PeP et al.\ e.\,V.\\
     \url{www.pep-dortmund.org}\\
     \vspace{16pt}
   }
