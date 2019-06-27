@@ -25,7 +25,7 @@ while [ "$count" -gt "$counter" ]; do
 
   company=$(sed -n "${line}p" $adressbook | awk '{print toupper(substr($1,2,3))}')
 
-  counterstring=$(printf %04d "$counter")
+  counterstring=$(printf %04d "$((counter + 1))")
   messebrief="Messebrief_${counterstring}_${company}.pdf"
   pdftk "A=$file" "B=$enclosure1" "C=$enclosure2" "D=$enclosure3" cat "A${start}-${end}" "B" "C" "D" output "${folder}$messebrief"
   echo "$folder$messebrief"
