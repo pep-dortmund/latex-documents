@@ -1,0 +1,81 @@
+\documentclass[
+  pepbrief,
+  fontsize=12pt,
+  paper=a4,
+  DIV=14,
+  parskip=half,
+  backaddress=false,
+]{scrlttr2}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{siunitx}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+\definecolor{grau}{rgb}{0.830,0.865,0.857}
+
+\setkomavar{subject}{Ablaufplan der PhysiKon 2019}
+
+\newcommand{\messekatalog}{21.03.2019}
+\newcommand{\stellenanzeigen}{05.04.2019}
+
+\begin{document}
+\renewcommand{\addrentry}[9]{%
+\begin{letter}{#8\\#2 #1\\#3}
+\author{#6}
+% ANREDE
+\if #5m \opening{Sehr geehrter Herr #1,}\fi
+\if #5f \opening{Sehr geehrte Frau #1,}\fi
+% BRIEFTEXT
+wir freuen uns Sie am 11. April auf der PhysiKon 2019 begrüßen zu dürfen. Damit es einen reibungslosen Ablauf gibt, senden wir Ihnen hiermit die notwendigen Informationen für den Tag der Ausstellung.
+
+\begin{description}
+  \item[\textbf{Ablaufplan:}] Einen Ablaufplan der Veranstaltung finden Sie im Anhang. Ab 8 Uhr kann Ihr Messestand im Ausstellungsraum aufgebaut werden. Wir stehen Ihnen mit Rat und Tat zur Verfügung. Sollten Sie eine \textbf{Präsentation} haben, entnehmen Sie die Zeiten bitte dem Ablaufplan.
+  \item[\textbf{Veranstaltungsort:}] Die PhysiKon findet an der Technischen Universität Dortmund im Campus Treff statt.
+  Die Anschrift lautet:
+
+  Campus Treff\\
+  Vogelpothsweg 118\\
+  44227 Dortmund
+
+  Wir haben Parkplätze bei Einfahrt 23 (E 23) direkt vor dem Campus Treff für Sie reserviert. Sie müssen den Einweisern lediglich mitteilen, dass Sie Aussteller auf der PhysiKon sind.
+  Eine genaue Anfahrtsskizze finden sie in der Anlage.
+
+  Sollten Sie mit der Bahn anreisen, fahren Sie bitte bis zur S-Bahn Haltestelle Dortmund Universität. Von dort wird der Weg zum Ausstellungsort ausgeschildert sein.
+  \item[\textbf{Messestand:}] Damit Sie vor Ort schnell die Position Ihres Messestands finden, haben wir Ihnen den Messeplan im Anhang beigefügt. So können Sie zügig mit dem Aufbau Ihres Standes beginnen. Sie finden Ihren Stand an Position #4. Im Ausstellungsraum werden Ihnen Helfer zur Seite stehen und Ihre Fragen beantworten.
+  Strom, Tische und Stellwände finden Sie wie angefragt an Ihrem Stand.
+  \item[\textbf{WLAN:}] Für die Messe wird Ihnen ein WLAN-Zugang bereit gestellt. Die Zugangsdaten erhalten Sie am Messetag.
+  \item[\textbf{Messekatalog:}] Anbei schicken wir Ihnen Ihre Anzeige für den Messekatalog, so wie sie in unserem Katalog erscheinen wird. Sollten Sie noch Änderungen wünschen, können wir diese bis zum {\messekatalog} in der Druckversion berücksichtigen. Nach diesem Datum lassen sich Änderungen lediglich an der digitalen Version vornehmen.
+  \item[\textbf{Stellenmarkt:}] Sollten Sie auf dem Stellenmarkt  offene Stellen, Praktika oder Traineeprogramme veröffentlichen wollen, schicken Sie uns die Anzeigen bitte bis zum {\stellenanzeigen} zu. Selbstverständlich können wir auch am Ausstellungstag mitgebrachte und gedruckte Stellenanzeiten entgegen nehmen und in unseren Stellenmarkt hängen.
+\end{description}
+
+Für Fragen, Probleme oder Anregungen sind wir unter physikon@pep-dortmund.org zu erreichen. Alle Informationen finden Sie auch auf www.physikon.pep-dortmund.org.
+
+Der Alumni-Verein PeP et al. e.\,V. unterstützt die Fakultät Physik in Forschung und Lehre und fördert den Kontakt und Erfahrungsaustausch zwischen dem Fachbereich, seinen derzeitigen Studierenden und seinen Absolventen. Neben der PhysiKon veranstalten wir jedes Jahr die Absolventenfeier der Fakultät Physik, sowie Workshops, Exkursionen und die Sommerakademie für Physikstudierende. Außerdem finanzieren wir jährlich Stipendien für herausragende Studenten. Weitere Informationen über PeP et al. finden Sie unter www.pep-dortmund.org.
+
+Wir freuen uns auf eine erfolgreiche PhysiKon mit Ihnen!
+
+% BRIEFSCHLUSS
+\closing{Viele Grüße aus Dortmund}
+
+% ANHANG
+\encl{Ablaufplan\\
+      Anfahrtsskizze\\
+      Messeplan\\
+      Messekatalog}
+\end{letter}
+}
+\input{Test_Unternehmen.adr}
+
+\end{document}
