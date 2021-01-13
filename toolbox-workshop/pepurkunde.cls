@@ -29,7 +29,7 @@
 \newgeometry{margin=1.5cm, left=6.5cm, top=3cm}
 
 \RequirePackage{fontspec}
-%\setsansfont{Akkurat Office}
+\setsansfont{Akkurat Office}
 \renewcommand\familydefault\sfdefault
 
 \RequirePackage{polyglossia}
