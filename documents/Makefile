@@ -4,6 +4,7 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=soak_anmeldung \
+	bescheinigung \
 	brief \
 	mitgliedsantrag \
 	mitgliedsantrag_a5 \
