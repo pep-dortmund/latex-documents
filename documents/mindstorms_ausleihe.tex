@@ -1,0 +1,67 @@
+\documentclass[parskip=half]{scrartcl}
+\pagestyle{empty}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+
+\usepackage{fontawesome}
+
+\hypersetup{
+  pdfauthor={Kai Brügge}
+}
+
+\begin{document}
+% \title{Ausleihformular für Lego Minstorms}
+\section*{Ausleihformular für Lego Minstorms}
+
+Zum Ausleihen eines Lego Mindstorms Set sind folgende Informationen vollständig auszufüllen.
+\begin{Form}
+\subsection*{Ausgeliehen an:}
+\renewcommand{\LayoutTextField}[2]{% label, field
+  #2\\\vspace{-4pt}{\scriptsize#1}%
+}
+\TextField[name=NAME, width=\textwidth]{Name, Vorname}\\
+\\
+\TextField[name=street, width=\textwidth]{Straße, Hausnummer}\\
+\\
+\TextField[name=city, width=\textwidth,]{PLZ, Stadt}
+
+\subsection*{Ausgeliehen von:}
+\TextField[name=pepname, width=\textwidth]{Name, Vorname}
+
+\subsection*{Lego Set:}
+Ausgeliehen wird der das Set mit der Nummer \TextField[name=setnum, width=1cm,borderstyle=U]{}\\
+Zum Ausgabedatum ist das Set komplett: \CheckBox[name=ausgabe]{}
+\\
+\\
+\renewcommand{\LayoutTextField}[2]{#2}
+Ausgabedatum: \TextField[name=datumausgabe, width=3cm,borderstyle=_]{TT.MM.JJJJ}\hspace{1cm} Spätestes Rückgabedatum: \TextField[name=datumspeatesterueckgabe, width=3cm,borderstyle=U]{TT.MM.JJJJ}\\
+\\
+\renewcommand{\LayoutTextField}[2]{% label, field
+  #2\\\vspace{-4pt}{\scriptsize#1}%
+}
+\TextField[name=sig, width=\textwidth]{Datum, Unterschrift}
+\\
+\\
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\\
+\renewcommand{\LayoutTextField}[2]{#2}
+\subsection*{Rückgabe:}
+Zurückgegeben am : \TextField[name=datereuckgabe, width=3cm,borderstyle=_]{TT.MM.JJJJ}\hspace{1cm}\\
+Zum Rückgabedatum ist das Set komplett: \CheckBox[name=reuckgabe]{}
+\\
+\\
+\renewcommand{\LayoutTextField}[2]{% label, field
+  #2\\\vspace{-4pt}{\scriptsize#1}%
+}
+\TextField[name=signature, width=\textwidth]{Datum, Unterschrift}\\
+\\
+\TextField[name=signaturepep, width=\textwidth]{Datum, Unterschrift PEP Mitglied}
+
+\end{Form}
+
+\end{document}

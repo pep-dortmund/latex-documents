@@ -1,49 +1,52 @@
 \documentclass[
   paper=a4,
   fontsize=12pt,
-  DIV=20,
-  headheight=52pt,
-  headinclude,
   parskip=half,
 ]{scrartcl}
 
+
+\usepackage[margin=2cm, top=1cm, bottom=1cm]{geometry}
+
+\RedeclareSectionCommand[beforeskip=1ex, afterskip=0.5ex]{section}
+
 \usepackage{fontspec}
-  \setsansfont{Source Sans Pro}
-  \renewcommand{\familydefault}{\sfdefault}
-  \newfontfamily\geomfont{DejaVu Sans}
-  \newcommand\checkbox{{\geomfont\symbol{"25A2}}}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\geomfont{DejaVu Sans}
 
 \usepackage{polyglossia}
-  \setmainlanguage{german}
+\setmainlanguage{german}
 
 \usepackage{microtype}
+\usepackage{setspace}
+
 \usepackage{graphicx}
 \usepackage{xcolor}
-  \definecolor{pepblue}{HTML}{397CCC}
+\definecolor{pepblue}{HTML}{397CCC}
+
 \usepackage[colorlinks=true,urlcolor=pepblue]{hyperref}
 
-\usepackage{scrlayer-scrpage}
-  \pagestyle{scrheadings}
-  \setkomafont{pagehead}{\normalfont}
-  \setkomafont{pagefoot}{\normalfont\footnotesize}
-  % \ohead{\includegraphics[height=1.5cm]{pep.pdf}}
-  \ihead{%
-    \large\textbf{PeP et al.\ e.\,V.}\\%
-    Sommerakademie 2017
-  }
-  \ohead{\includegraphics[height=1cm]{pep.pdf}}
 
-  \ifoot{}
-  \cfoot{}
-
-\usepackage{pifont}
-  \newcommand{\cuthere}{%
-  \noindent
-  \raisebox{-2.8pt}[0pt][0.75\baselineskip]{\small\ding{34}}
+\newcommand\checkbox{{\geomfont\symbol{"25A2}}}
+\newcommand{\cuthere}{%
+  \noindent%
+  \raisebox{-0.7ex}[0pt][0.75\baselineskip]{\geomfont\symbol{"2702}}%
   \unskip{\tiny\dotfill}\\
-  }
+}
+
+\pagestyle{empty}
 
 \begin{document}
+
+\begin{minipage}{0.5\textwidth}
+  \large\textbf{PeP et al.\ e.\,V.}\\%
+  Sommerakademie 2018
+\end{minipage}%
+\begin{minipage}{0.5\textwidth}
+  \raggedleft%
+  \includegraphics[height=1.5cm]{pep.pdf}
+\end{minipage}
+
 
 \section*{Anmeldeunterlagen}
 Bitte reicht Eure Anmeldung ein, an:
@@ -54,7 +57,7 @@ Bitte reicht Eure Anmeldung ein, an:
 
 Der Termin für die diesjährige Sommerakademie ist:
 \begin{addmargin}[1em]{2em}
-  19.\ bis 27.\ August 2017 \\
+  18.\ bis 26.\ August 2018 \\
   Botzi-Hütte, Tschagguns, Österreich
 \end{addmargin}
 
@@ -67,7 +70,7 @@ Zur Anmeldung bitte den Bogen unten ausfüllen, abtrennen und in CP-O3-107 vorbe
 Für weitere Fragen kommt einfach persönlich vorbei oder schickt eine Mail an:\\
 \centerline{\href{mailto:sommerakademie@pep-dortmund.org}{sommerakademie@pep-dortmund.org}}
 
-Den Teilnehmerbeitrag bitte bis zum 1.~August~2017 überweisen an: \\
+Den Teilnehmerbeitrag bitte bis zum 1.~August~2018 überweisen an: \\
 \input{pepbankverbindung.tex}%
 
 \cuthere
@@ -75,16 +78,23 @@ Den Teilnehmerbeitrag bitte bis zum 1.~August~2017 überweisen an: \\
 
 \section*{Anmeldeformular}
 
-Name: \hrulefill\\[0.6\baselineskip]
-Anschrift: \hrulefill\\[0.6\baselineskip]
-\phantom{Anschrift:} \hrulefill\\[0.6\baselineskip]
-Email: \hrulefill\\[0.6\baselineskip]
-Telefon: \rule{4cm}{0.4pt}\hfill
-Semester: \rule{2cm}{0.4pt}\hfill
-Studiengang: \rule{4cm}{0.4pt}\\
+\begin{spacing}{1.7}
+  Name: \hrulefill\\
+  Anschrift: \hrulefill\\
+  \phantom{Anschrift:} \hrulefill\\
+  Email: \hrulefill\\
+  Telefon: \hrulefill\\
+  Semester: \rule{1cm}{0.4pt}
+  Studiengang: \hrulefill\\
+  Vegetarisch: \checkbox{}
+  Vegan: \checkbox{}
+  Unverträglichkeiten: \hrulefill\\
+  Eigenanreise: \checkbox{}
+  Keine Unterbringung in der Botzi-Hütte: \checkbox{}
+\end{spacing}
 
-Ich melde mich hiermit verbindlich für die PeP et al. Sommerakademie 2017 an.
-Ich werde meinen Teilnehmerbeitrag von 100€ (Alumni 260€/160€) bis zum 1. August 2017 auf das obenstehende Konto überweisen.
+Ich melde mich hiermit verbindlich für die PeP et al. Sommerakademie 2018 an.
+Ich werde meinen Teilnehmerbeitrag von 100€ (Alumni 260€/160€) bis zum 1. August 2018 auf das obenstehende Konto überweisen.
 \enlargethispage{\baselineskip}\vfill
 \begin{center}
   \begin{tabular}{p{0.4\textwidth} @{\extracolsep{5em}} p{0.4\textwidth}}

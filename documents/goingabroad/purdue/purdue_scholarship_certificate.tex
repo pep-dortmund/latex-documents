@@ -1,0 +1,75 @@
+\documentclass{../../../absolventenfeier/pepurkunde}
+
+\usepackage{csquotes}
+
+
+\NewDocumentCommand\urkunde{s m}{%
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Going Abroad Scholarship}
+
+    \vspace{1.0cm}
+
+    {\Large%
+      The alumni association of physics students and former physics students
+      \enquote{PeP et al. e.V.}
+      awards
+
+      \IfBooleanTF{#1}{Frau}{Herrn}
+
+      {\Huge\bfseries #2}
+
+
+      with the Going Abroad Scholarship.
+
+      \vspace{3em}
+
+      The Going Abroad Scholarship is a cooperation of PeP~et~al.~e.V. and
+      Prof. Andreas Jung to offer outstanding students research experience at
+      Purdue University, USA. The scholarship funds a three-month
+      stay in the group Prof. Andreas Jung including travel and
+      Visa costs.
+
+    }
+  \end{center}
+
+  \vfill
+
+  \large%
+  Dortmund, 11. November 2019
+
+  \vspace{2cm}
+
+  \begin{minipage}{0.45\textwidth}
+    Marie Schmitz\\
+    \color{darkgray}
+    1. chair\\
+    PeP et al.\ e.V.
+  \end{minipage}
+  \hfill%
+  \begin{minipage}{0.45\textwidth}
+    Kevin Schmidt\\
+    \color{darkgray}
+    2. chair\\
+    PeP et al.\ e.V.
+  \end{minipage}
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    % \includegraphics[height=1.4cm]{tu.pdf}\\[0.25cm]
+    \includegraphics[height=1.4cm]{pep.pdf}
+  \end{center}
+  \newpage
+}
+
+
+\date{11. November 2019}
+
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  %%% WICHTIG %%%
+  % Aus Datenschutzgründen die echten Namen nicht commiten!
+  \urkunde{Max Mustermann}
+  \urkunde*{Marie Musterfrau}
+\end{document}

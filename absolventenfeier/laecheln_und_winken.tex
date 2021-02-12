@@ -1,0 +1,68 @@
+\documentclass[parskip=half, fontsize=11pt]{scrartcl}
+
+\usepackage[margin=1.5cm, left=6.5cm, top=5cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Akkurat Office}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{csquotes}
+\usepackage{fontawesome5}
+
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\usepackage{tikz}
+
+\usepackage{xcolor}
+\definecolor{tu}{RGB}{131,184,23}
+\definecolor{physik}{RGB}{8,81,162}
+
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay, shift=(current page.north west)]
+  \fill[tu] (1.5cm, 0) rectangle (5.5cm, -\paperheight);
+  \node[anchor=center, inner sep=0pt] at (3.5cm, -3cm) {%
+    \includegraphics[width=3.8cm]{schwingung_positiv_white.pdf}
+  };
+\end{tikzpicture}
+
+\centering
+\textbf{\fontsize{36}{40}\selectfont Lächeln und Winken!}
+
+\vspace{1.0cm}
+
+{\Large%
+  Der Verein der Physikstudierenden und ehemaligen Physikstudierenden
+  \enquote{PeP et al. e.\,V.} gratuliert Ihnen zu Ihrem Abschluss.
+
+  Wir wünschen Ihnen auch weiterhin viel Erfolg!
+}
+
+\vfill
+
+{
+  \fontsize{140}{160}\selectfont\color{yellow!85!red}
+  \faIcon[regular]{smile-wink}
+}
+
+
+\vfill
+{\large%
+  Falls Ihnen ihr Zeugnis noch nicht ausgehändigt wurde,
+  melden Sie sich bitte im Dekanat.
+}
+
+
+\vspace{0.5cm}
+
+\includegraphics[height=1.4cm]{tu.pdf}%
+\hfill%
+\includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
+\includegraphics[height=1.4cm]{pep.pdf}
+  
+\end{document}

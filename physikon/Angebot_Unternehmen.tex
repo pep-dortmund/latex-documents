@@ -1,0 +1,107 @@
+\documentclass[
+  pepbrief,
+  fontsize=12pt,
+  paper=a4,
+  DIV=14,
+  parskip=half,
+  backaddress=false,
+]{scrlttr2}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{siunitx}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+\definecolor{grau}{rgb}{0.830,0.865,0.857}
+
+\author{Lena Linhoff}
+\setkomavar{subject}{Angebot zur PhysiKon 2020}
+
+\begin{document}
+\begin{letter}{%
+  Firma X\\
+  Herr Max Mustermann\\
+  Spendenstraße 6\\
+  44137 Dortmund%
+}
+% ANREDE
+\opening{Sehr geehrter Herr Mustermann,}
+% BRIEFTEXT
+wir freuen uns Ihnen ein Angebot zur PhysiKon am 16. April 2020 an der TU Dortmund machen zu dürfen.
+Hiermit erhalten Sie alle Informationen zu den Gebühren und den enthaltenen Leistungen sowie weitere Informationen zu unserem Verein.
+
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+  \bfseries\scshape
+	\begin{tabular}{| c | c | c |}
+		\hline
+		\rowcolor{grau}
+		 Betrag in Ziffern & Betrag in Buchstaben & Kontoinformationen\\
+		\hline
+    1000,–\,€ & \normalfont Eintausend Euro & \normalfont \begin{tabular}{@{}c@{}}\input{pepbankverbindung.tex}\end{tabular}\\
+		\hline
+	\end{tabular}
+\end{center}
+Sollten Sie sich für eine Teilnahme an der PhysiKon entscheiden, bitten wir Sie uns dies zeitnah schriftlich oder per Mail zu bestätigen, sowie die Ausstellergebühr von 1000 Euro bis zum 1.\,Februar 2020 auf unser Konto bei der Dortmunder Volksbank zu überweisen.
+
+Durch Überweisen der Ausstellergebühr erhalten Sie das folgende Rundum-Sorglos-Paket:
+
+\begin{itemize}
+  \item \textbf{Messestand:} Sie erhalten eine Ausstellungsfläche von ca. 2,5 m x 2,5 m.
+    Auf Wunsch kann gerne ein Stehtisch oder auch ein Ablagetisch zur Verfügung gestellt werden.
+    Für eine ausreichende Stromversorgung (500 Watt), sowie einen Internetzugang wird gesorgt.
+    Wir bitten allerdings darum, keine allzu großen Verbraucher (zum Beispiel Beleuchtung für Roll-Up-Banner und Stellwände, etc.) mitzubringen.
+    Aufgrund der begrenzten Fläche möchten wir Sie auch bitten keine großen Aufbauten für Ihren Stand mitzubringen.
+    Roll-Up-Banner, Prospektständer, etc. sind natürlich kein Problem.
+    Wir stellen Ihnen gerne Stellwände zur Verfügung, um Werbematerialien aufzuhängen.
+    Größere Stellflächen sind aus organisatorischen Gründen leider nicht möglich.
+    \item \textbf{Messekatalog:} Zur PhysiKon wird ein Messekatalog erscheinen, der an die Besucherinnen und Besucher kostenlos verteilt wird.
+    Für Ihre Doppelseite im Katalog brauchen wir folgende Kennzahlen Ihres Unternehmens:
+    \begin{itemize}
+      \item Adresse
+      \item Kontakt (Ansprechpartner, Email-Adresse) für Bewerbungen
+      \item Branche
+      \item Standorte
+      \item Anzahl der Mitarbeiter
+      \item Gewünschte Zusatzqualifikationen
+    \end{itemize}
+    Weiterhin benötigen wir einen kurzen Text (max. 500 Zeichen), der Ihr Unternehmen gut beschreibt, und ein Anzeigenbild (Format DIN A4 oder A5 hochkant), das auf der Doppelseite erscheinen soll.
+    \item \textbf{Präsentation:} Den Absolventen und Studierenden sollen auf der PhysiKon nicht nur Unternehmen präsentiert werden, sondern auch die Berufsrealität näher gebracht werden.
+    Wir bieten Ihnen daher die Möglichkeit, Ihr Unternehmen und Ihren Berufsalltag in einem kurzen Vortrag einem größeren Publikum vorzustellen.
+    Falls Sie einen Vortrag anbieten möchten, geben Sie uns bitte Bescheid.
+    \item \textbf{Stellenmarkt:} Auf dem Stellenmarkt können Sie offene Stellen, Praktika oder Traineeprogramme veröffentlichen. Damit die Anzeigen möglichst aktuell sind,
+    werden wir Sie einige Wochen vor der Veranstaltung bitten uns Stellenangebote zuzusenden.
+    \item \textbf{Catering:} Für das leibliche Wohl des Standpersonals wird selbstverständlich von uns gesorgt.
+    \item \textbf{Veranstaltungsort:}
+    \vspace{3mm}\\
+    Campus Treff\\
+    Vogelpothsweg 118\\
+    44227 Dortmund
+\end{itemize}
+
+Für Fragen, Probleme oder Anregungen sind wir unter physikon@pep-dortmund.org zu erreichen. Alle Informationen finden Sie auch auf www.physikon.pep-dortmund.org.
+
+Der Alumni-Verein PeP et al. e.\,V. unterstützt die Fakultät Physik in Forschung und Lehre und fördert den Kontakt und Erfahrungsaustausch zwischen dem Fachbereich,
+seinen derzeitigen Studierenden und seinen Absolventen. Neben der PhysiKon veranstalten wir jedes Jahr die Absolventenfeier der Fakultät Physik, sowie Workshops, Exkursionen
+und die Sommerakademie für Physikstudierende. Außerdem finanzieren wir jährlich Stipendien für herausragende Studierende. Weitere Informationen über PeP et al. finden Sie unter
+www.pep-dortmund.org.
+
+Wir freuen uns auf eine erfolgreiche PhysiKon mit Ihnen!
+
+% BRIEFSCHLUSS
+\closing{Mit freundlichen Grüßen}
+
+% ANHANG
+\end{letter}
+\end{document}

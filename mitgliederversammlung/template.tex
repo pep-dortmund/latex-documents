@@ -1,0 +1,196 @@
+% vim: spelllang=de
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  parskip=half,
+  headinclude=true,
+]{scrartcl}
+
+
+\usepackage[margin=2cm, bottom=3cm]{geometry}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\usepackage{microtype}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[main=ngerman]{babel}
+\usepackage[locale=DE]{siunitx}
+
+
+
+\usepackage[autostyle]{csquotes}
+
+\usepackage{enumitem}
+\setlist{noitemsep, topsep=0.0pt}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\usepackage{siunitx}
+\usepackage{enumerate}
+
+\renewcommand*\sectionformat{TOP~\thesection{}~}
+\newcommand{\unterschrift}[1]{%
+  \begin{minipage}{0.45\linewidth}%
+    \vspace{1.5cm}%
+    \rule{\linewidth}{1pt}\\
+    #1%
+  \end{minipage}
+}
+
+\title{Protokoll der Mitgliederversammlung des Vereins PeP at al. e.V.}
+\author{Protokollfürerïn}
+\date{%
+  Tag, Datum\\
+  \begin{tabular}{l l}
+    Beginn: & xx:xx\\
+    Ende: & xx:xx\\
+  \end{tabular}
+}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Anwesenheitsliste}
+
+Es nehmen insgesamt XX Teilnehmerïnnen teil:
+
+% Alphabetisch nach Nachnahmen
+John Doe, Jane Doe 
+
+
+\section{Begrüßung}
+
+XX eröffnet um XX:XX die Mitgliederversammlung (MV) und stellt die fristgerechte Einladung fest.
+Das Protokoll wird von YY geführt.
+
+\section{Beschluss der Tagesordnung}
+
+Die Tagesordnung wird einstimmig angenommen.
+
+\section{Berichte}
+
+\subsection{Finanzen}
+\subsection{Stipendien}
+\subsection{Sommer- und Alumniakademie}
+\subsection{Toolbox Workshop}
+\subsection{Workshops}
+\subsection{Absolventenfeier}
+\subsection{PhysiKon}
+\subsection{Stammtische}
+\subsection{Going Abroad}
+\subsection{Sonstiges}
+
+\section{Bericht der Kassenprüfer}
+
+\section{Entlastung des Vorstands}
+
+\section{Wahlen des Vorstands und der Kassenprüfer}
+
+
+\subsection{Wahl des geschäftsführenden Vorstands}
+
+Es werden folgende Personen für die jeweiligen Ämter vorgeschlagen:
+
+\begin{tabular}{l l}
+  1. Vorsitzender: & \\
+  2. Vorsitzender: & \\
+  Finanzreferentin: & \\
+\end{tabular}
+
+Die drei Ämter werden einstimmig, en bloc gewählt.
+Die Wahl wird angenommen.
+
+\subsection{Wahl der Vorstandsposten (VP) Koordination, Mitgliederverwaltung und Ressourcenverwaltung}
+
+Es werden vorgeschlagen:
+
+\begin{tabular}{l l}
+  Koordination: & \\
+  Mitgliederverwaltung: & \\
+  Ressourcenverwaltung: & \\
+\end{tabular}
+
+Die drei Ämter werden einstimmig, en bloc gewählt, die Wahl wird angenommen.
+
+
+\subsection{Wahl der VPs Begabtenförderung, Fortbildung, Toolbox-Workshop}
+
+Es werden vorgeschlagen:
+
+\begin{tabular}{l l}
+  Begabtenförderung (2 Posten): & \\
+  Fortbildung: & \\
+  Toolbox-Workshop: & \\
+\end{tabular}
+
+Die vier Ämter werden einstimmig, en bloc gewählt, die Wahl wird angenommen.
+
+
+\subsection{Wahl der VPs Öffentlichkeitsarbeit, Alumniarbeit, Sommerakademie}
+
+Es werden vorgeschlagen:
+
+\begin{tabular}{l l}
+  Öffentlichkeitsarbeit: & \\
+  Alumniarbeit: (2 Posten) & \\
+  Sommerakademie: & \\
+\end{tabular}
+
+Die vier Kandidaten und Kandidatinnen werden en bloc einstimmig, die Wahl wird angenommen.
+
+\subsection{Wahl der VPs Wirtschaft und Lehramt}
+
+Es werden vorgeschlagen:
+
+\begin{tabular}{l l}
+  Wirtschaft: & \\
+  Lehramt:  & \\
+\end{tabular}
+
+Die beiden Kandidaten werden en bloc einstimmig gewählt, die Wahl wird angenommen.
+
+
+\subsection{Wahl der Kassenprüfer}
+Es werden vorgeschlagen:
+
+\begin{itemize}
+  \item XX
+  \item XX
+\end{itemize}
+
+\section{Haushalt}
+
+
+\begin{center}
+\begin{tabular}{l r r}
+  \toprule
+  Absolventenfeier       & XX\,€ & jährlich bis auf Widerruf\\
+  Deutschlandstipendien: & XX\,€ & einmalig\\
+  Going Abroad 2021      & XX\,€ & einmalig\\
+  Initiativstipendien:   & XX\,€ & jährlich bis auf Widerruf\\
+  PhysiKon               & XX\,€ & jährlich bis auf Widerruf\\
+  Sommerakademie         & XX\,€ & jährlich bis auf Widerruf\\
+  Workshops              & XX\,€ & jährlich bis auf Widerruf\\
+  \midrule
+  \bfseries Gesamt & XX\,€ & \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+\section{Abschluss}
+
+XY schließt die MV um 20:05.
+
+\unterschrift{A, 1. Vorsitzender}
+\hfill
+\unterschrift{B, 2. Vorsitzender}
+
+\unterschrift{C, Finanzreferentin}
+\hfill
+\unterschrift{D, Protokollführer}
+
+
+\end{document}

@@ -1,0 +1,19 @@
+\addrentry{Mustermann} %Name
+         {Max} %Vorname
+         {Musterstraße 1\\12345 Musterhausen} %Adresse
+         {A1} %Messeplan
+         {m} %Geschlecht
+         {Henning Moldenhauer} %Kontakt
+         {123abc} %WLAN-Schlüssel
+         {Musterfirma A} %Firma
+         {Kürzel}
+
+\addrentry{Musterfrau} %Name
+         {Mona} %Vorname
+         {Musterstraße 2\\12345 Musterhausen} %Adresse
+         {C2} %Messeplan
+         {f} %Geschlecht
+         {Lena Linhoff} %Kontakt
+         {456def} %WLAN-Schlüssel
+         {MusterGmBh XYZ} %Firma
+         {Kürzel}

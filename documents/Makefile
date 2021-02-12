@@ -4,12 +4,15 @@ TEXOPTS= --lualatex \
 	 --halt-on-error
 
 TARGETS=soak_anmeldung \
+	bescheinigung \
 	brief \
 	mitgliedsantrag \
+	mitgliedsantrag_a5 \
 	stipendium_antrag \
 	stipendium_aushang \
 	stipendium_initiativ \
 	stipendium_initiativ_vertrag \
+	mindstorms_ausleihe \
 	goingabroad/purdue/purdue_brief_absage \
 	goingabroad/purdue/purdue_brief_zusage \
 	goingabroad/purdue/purdue_anleitung \

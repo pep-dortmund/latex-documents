@@ -1,0 +1,71 @@
+\documentclass{pepurkunde}
+
+\usepackage{csquotes}
+
+\NewDocumentCommand\urkunde{s m}{%
+  \begin{center}
+    \textbf{\fontsize{36}{40}\selectfont Urkunde}
+
+    \vspace{1.0cm}
+
+    {\Large%
+      Der Verein der Physikstudierenden und ehemaligen Physikstudierenden
+      \enquote{PeP et al. e.\,V.}
+      bedankt sich bei
+
+      \IfBooleanTF{#1}{Frau}{Herrn}
+
+      {\Huge\bfseries #2}
+
+
+      sehr herzlich für \IfBooleanTF{#1}{ihre}{seine} ehrenamtliche Mitarbeit beim Toolbox-Workshop 2020.
+      
+      Der Toolbox-Workshop findet seit neun Jahren jedes Jahr vor dem Wintersemester statt. In den zehn Tagen werden mit den angehenden Physik- und Medizinphysikstudierenden des dritten Semesters Programme erarbeitet, die das wissenschaftliche Arbeiten erleichtern.
+      Die Mitarbeit besteht aus dem Lösen von Problemen bei der Installation,
+      der Vorstellung von Programmen und der Hilfestellung zu Übungsaufgaben.
+    }
+  \end{center}
+
+  \vfill
+
+  \large%
+  Dortmund, \today
+
+  \vspace{2cm}
+
+  \begin{minipage}{0.45\textwidth}
+    Kevon Schmidt\\
+    \color{darkgray}
+    1.\,Vorsitzender\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+  \hfill%
+  \begin{minipage}{0.45\textwidth}
+    Christian Beckmann\\
+    \color{darkgray}
+    Vorstandsposten Toolbox\\
+    PeP et al.\ e.\,V.
+  \end{minipage}
+
+
+  \vspace{0.5cm}
+  \begin{center}
+    \includegraphics[height=1.4cm]{tu.pdf}%
+    \hfill%
+    \includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
+    \includegraphics[height=1.4cm]{pep.pdf}
+  \end{center}
+  \newpage
+}
+
+
+\date{\today}
+
+\begin{document}
+  % Frauen mit *, männer ohne
+
+  %%% WICHTIG %%%
+  % Aus Datenschutzgründen die echten Namen nicht commiten!
+  \urkunde{Max Mustermann}
+  \urkunde*{Marie Musterfrau}
+\end{document}

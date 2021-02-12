@@ -1,0 +1,88 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  headheight=30pt,
+  footheight=45pt,
+  headinclude,
+  parskip=half,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\geomfont{DejaVu Sans}
+\newcommand\checkbox{{\geomfont\symbol{"25A2}}}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+\ohead{\includegraphics[height=1.5cm]{images/logo-pfeil-gruen.pdf}}
+\ihead{%
+  \large\textbf{Ablaufplan}\\%
+}
+\cfoot{%
+  \parbox[c]{0.3\textwidth}{%
+    \input{pepadresse.tex}%
+  }%
+}
+
+\ofoot{%
+  \parbox[c]{0.3\textwidth}{%
+  Bankverbindung\\
+  \input{pepbankverbindung.tex}%
+  }%
+}
+\ifoot{%
+  \includegraphics[height=1cm]{pep.pdf}\\
+  \url{www.pep-dortmund.org}
+}
+
+
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+
+\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+
+\begin{document}
+\begin{description}
+  \item[\textbf{08:00-10:00}] Aufbau\\
+    Ab 8 Uhr können Sie anreisen und Ihren Messestand im Campus Treff aufbauen. Vor Ort werden Helfer sein, die Ihre Fragen beantworten und Sie bestmöglich unterstützen. Die bestellten Tische, Strom und evtl. Stellwände finden Sie ebenfalls vor Ort.
+  \item[\textbf{10:00-16:00}] Ausstellung\\
+    Die PhysiKon findet zwischen 10 und 16 Uhr statt.
+    Während der gesamten Veranstaltung können Sie sich in unserem Aussteller-Bistro mit Speisen und Getränken versorgen. Eine Mittagspause ist nicht eingeplant, bitte wechseln Sie sich so ab, dass Ihr Stand zu jeder Zeit besetzt ist.
+
+    Das Vortragsprogramm ist wie folgt gestaltet:
+    \begin{description}
+      \item[\textbf{10:30-10:45}] IAV GmbH
+      \item[\textbf{10:45-11:00}] Scisys Deutschland GmbH
+      \item[\textbf{11:00-11:15}] Cohausz \& Florack
+      \item[\textbf{11:15-11:30}] Ritzenhoefer GmbH
+      \item[ ]
+      \item[\textbf{13:30-13:45}] Warth \& Klein Grant Thornton AG
+      \item[\textbf{13:45-14:00}] zeb
+      \item[\textbf{14:00-14:15}] VDI Technologiezentrum GmbH
+      \item[\textbf{14:15-14:30}] Point 8 GmbH
+      \item[ ]
+      \item[\textbf{15:30-15:45}] mitNORM
+      \item[\textbf{15:45-16:00}] wir:personalberater
+    \end{description}
+  \item[\textbf{16:00-17:00}] Abbau\\
+    Ab 16 Uhr können Sie beginnen Ihren Stand abzubauen.
+\end{description}
+\end{document}
