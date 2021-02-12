@@ -1,0 +1,191 @@
+\documentclass[
+  paper=a4,
+  fontsize=12pt,
+  DIV=16,
+  headheight=30pt,
+  footheight=45pt,
+  headinclude,
+  parskip=half,
+]{scrartcl}
+
+\usepackage{fontspec}
+\setsansfont{Source Sans Pro}
+\renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\geomfont{DejaVu Sans}
+\newcommand\checkbox{{\geomfont\symbol{"25A2}}}
+
+\usepackage{polyglossia}
+\setmainlanguage{german}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagefoot}{\normalfont\footnotesize}
+\ohead{\includegraphics[height=1.5cm]{images/logo-pfeil-gruen.pdf}}
+\ihead{%
+  \large\textbf{Infobrief zur PhysiKon 2021}\\%
+}
+\cfoot{%
+  \parbox[c]{0.3\textwidth}{%
+    \input{pepadresse.tex}%
+  }%
+}
+
+\ofoot{%
+  \parbox[c]{0.3\textwidth}{%
+%   Bankverbindung\\
+  \input{pepbankverbindung.tex}%
+  }%
+}
+\ifoot{%
+  \includegraphics[height=1cm]{pep.pdf}\\
+  \url{www.pep-dortmund.org}
+}
+
+
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+% \usepackage{xcolor}
+\usepackage{calc}
+\usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
+\renewcommand{\arraystretch}{1.5}
+
+\newcommand\MyTextField[2][]{\TextField[#1, backgroundcolor=black!10, charsize=0pt, borderwidth=0]{#2}}
+\renewcommand*{\LayoutTextField}[2]{\makebox[\widthof{#1: }][l]{#1: }%
+\raisebox{0.8\baselineskip}{\raisebox{-\height}{#2}}}
+
+
+\begin{document}
+
+\section*{Herzlich Willkommen zur PhysiKon-Woche 2021!}
+
+Schön, dass Sie bei unserer Jobmesse PhysiKon mit an Board sind!
+Dieses jahr wird die Jobmesse sondern online vom 19. bis 23.04.2021 stattfinden.
+In diesem Handzettel können wir hoffentlich alle wichtigen Fragen zur Veranstaltung beantworten.
+Falls noch Fragen offen sind, melden Sie sich gerne bei uns!
+
+\subsection*{Technische Voraussetzungen}
+
+Die PhysiKon 2021 wird online über das Videokonferenzsystem \textbf{Zoom} stattfinden.
+Sie benötigen dafür eine stabile Internetverbindung, einen Internetbrowser (am besten Safari oder Firefox), einen Lautsprecher und Mikrofon oder ein Headset.
+Wir werden den Link einige Tage vorher zur Verfügung stellen.
+Zoom ist recht intuitiv zu bedienen.
+Falls Sie sich mit der Software nicht auskennen und eine Generalprobe durchführen möchten, geben Sie uns einfach Bescheid.
+Wir organisieren gerne ein kurzes Test-Meeting mit Ihnen!
+
+Zoom stellt eine \enquote{Breakout-Room}-Funktion zur Verfügung.
+So können sich kleinere Gruppen in separaten Räumen unterhalten.
+Wir werden diese Funktion anbieten, damit Sie sich zum Beispiel nach Ihrem Vortrag noch mit interessierten BesucherInnen weiter austauschen können, wenn der nächste Vortrag schon startet.
+Denkbar wäre auch, dass Sie sich nach einer allgemeinen Vorstellung mit mehreren VertreterInnen Ihres Unternehmens (vielleicht aus verschiedenen Fachbereichen) auf verschiedene Zoom-Räume verteilen.
+Dies sei nur als Anregung erwähnt, Sie müssen die Breakout-Funktion selbstverständlich nicht nutzen.
+
+\subsection*{Ablauf und Präsentation}
+Sie haben eine Stunde zur Verfügung, die Sie im Grunde frei gestalten können.
+Klassischerweise können Sie einen Vortrag halten und Ihre Folien über das Videokonferenzsystem mit den Publikum teilen.
+Der Vortrag sollte ungefähr 20 Minuten lang sein, damit genug Zeit für Fragen und den Austausch mit den Studierenden bleibt.
+Wenn Sie kreative Ideen haben, wie Sie die Stunde interaktiver nutzen möchten, bringen Sie diese gerne mit ein!
+Wir helfen gerne bei der Umsetzung.
+
+Inhaltlich könnte Ihre Präsentation folgende Punkte abdecken:
+\begin{itemize}
+    \item Allgemeine Vorstellung des Unternehmens (Standort, Branche, Größe, Aufgabenfelder)
+    \item Arbeitsfelder für MINT-Fachkräfte
+    \item Einstiegsmöglichkeiten
+    \item Falls vorhanden: Typischer Arbeitsalltag, Gehaltsstruktur
+    \item Gerne: Persönlicher Werdegang, Einblick in Ihre persönliche (MINT-)Tätigkeit beim Unternehmen
+\end{itemize} 
+
+Diese Liste ist nicht vollständig und als Anregung gedacht.
+Sie können Ihren Vortrag natürlich beliebig gestalten.
+
+\subsection*{Katalog}
+
+Zur PhysiKon wird ein digitaler Messekatalog erscheinen, der während und auch nach der PhysiKon-Woche kostenlos über unsere Homepage verfügbar ist.
+Außerdem verlinken wir alle teilnehmenden Unternehmen auf unserer Homepage (https://physikon.pep-dortmund.org).
+Für den Katalog und die Homepage brauchen wir (falls nicht schon eingereicht):
+\begin{itemize}
+    \item Logo des Unternehmens
+    \item Adresse des Unternehmens
+    \item Kontakt (Ansprechpartner, Email-Adresse) für Bewerbungen
+    \item Branche
+    \item Standorte
+    \item Ungfähre Anzahl der Mitarbeiter
+    \item Gewünschte Zusatzqualifikationen der Bewerber
+    \item Kurzer Text (max. 500 Zeichen)
+    \item Anzeigenbild (A5 hochkant)
+\end{itemize}
+
+
+
+
+\subsection*{Jobbörse}
+
+Falls Sie aktuelle Stellenauschreibungen haben, veröffentlichen wir diese gerne in unserer PeP Jobbörse.
+Die Jobbörse ist unabhängig von der PhysiKon immer über unsere Homepage erreichbar (https://pep-dortmund.org/jobboerse).
+
+Senden Sie uns Ihre Stellenauschreibungen an jobboerse@pep-dortmund.org
+
+\subsection*{Finanzielle Unterstützung}
+
+Da wir in diesem Jahr mit dem Online-Format keine großen Kosten haben, gibt es keinen festen Ausstellerbeitrag.
+Wir freuen uns trotzdem sehr, wenn Sie unseren gemeinnützigen Verein finanziell unterstützen!
+Sie können für einen von Ihnen selbst gewählten Ausstellerbeitrag eine Rechnung oder eine Spendenquittung erhalten.
+
+Unser Verein PeP et al. e.\,V. unterstützt die Fakultät Physik in Forschung und Lehre und fördert den Kontakt zwischen dem Fachbereich, seinen derzeitigen Studierenden und seinen Absolventen.
+So organisieren wir zum Beispiel Workshops zu verschiedenen Themen, die jährliche Absolventenfeier der Fakultät und unsere Sommerakademie.
+Außerdem finanzieren wir jährlich Stipendien für herausragende Studierende.
+Mit Ihrem Beitrag unterstützen Sie unsere Projekte, die wir in ehrenamtlicher Arbeit für die Studierenden der Physik umsetzen.
+
+Bei Fragen zu finanziellen Themen wenden Sie sich an lena.linhoff@tu-dortmund.de
+
+\subsection*{Zeiteinteilung}
+
+\begin{table}[h]
+    \centering
+\begin{tabular}{|c|l|}
+    \hline
+    \multicolumn{2}{|c|}{Montag, 19.04.2021} \\
+    \hline
+    \rowcolor{gray!10} 16 ­- 17 Uhr & Ritzenhoefer \& Company \\
+    \rowcolor{gray!30} 17 - 18 Uhr & Bundesministerium für Verfassungsschutz\\
+    \hline
+    \multicolumn{2}{|c|}{Dienstag, 20.04.2021} \\
+    \hline
+    \rowcolor{gray!10} 16 ­- 17 Uhr & Brunel \\
+    \rowcolor{gray!30} 17 - 18 Uhr & Warth \& Klein Grant Thornton AG Wirtschaftsprüfungsgesellschaft\\
+    \hline
+    \multicolumn{2}{|c|}{Mittwoch, 21.04.2021} \\
+    \hline
+    \rowcolor{gray!10} 16 ­- 17 Uhr & Cohausz \& Florack \\
+    \rowcolor{gray!30} 17 - 18 Uhr & Point8\\
+    \hline
+    \multicolumn{2}{|c|}{Donnerstag, 22.04.2021} \\
+    \hline
+    \rowcolor{gray!10}16 ­- 17 Uhr & EY Parthenon\\
+    \rowcolor{gray!30}17 - 18 Uhr & thyssenkrupp Bilstein\\
+    \hline
+    \multicolumn{2}{|c|}{Freitag, 23.04.2021} \\
+    \hline
+    \rowcolor{gray!10}16 ­- 17 Uhr & Amprion \\
+    \rowcolor{gray!30}17 - 18 Uhr & \\
+    \hline
+    \end{tabular}
+
+\end{table}
+
+
+
+Sollten noch Fragen offen sein, geben Sie uns gerne Bescheid (Email: physikon@pep-dortmund.org).
+Wir freuen uns auf eine erfolgreiche PhysiKon 2021 mit Ihnen!
+
+\vspace{1cm}
+Ihr PhysiKon-Team und PeP et al. e.\,V.
+
+\end{document}
