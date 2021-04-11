@@ -9,7 +9,8 @@ TARGETS=Bestaetigung_Unternehmen \
 	Handzettel_00_Unternehmen \
 	Handzettel_01_Ablauf \
 	Handzettel_02_Anfahrtsskizze \
-	Handzettel_03_Messeplan
+	Handzettel_03_Messeplan \
+	Sponsoringvertrag
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
