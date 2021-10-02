@@ -1,0 +1,172 @@
+% Measurements:
+% Margins:
+%   top:    1.15cm
+%   bottom: 1.15cm
+%   left:   1.05cm
+%   right:  1.05cm
+% Logo:
+%   height: 2cm
+% Grid:
+%   height: 28.0cm
+%   width:  19.5cm
+% Watermark:
+%   diameter:   15.0cm
+
+% DINA4 Size: 21 cm x 29,7 cm
+% 21cm - (37 * 0.5 cm) = 21cm - 17.5cm = 3.5cm
+% left and right margins: 3.5cm * 0.5 = 1.75cm
+
+\RequirePackage{luatex85}
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+
+\usepackage{fontspec}
+\setsansfont{Roboto}
+\setmonofont{Roboto Mono}
+\let\familydefault\sfdefault
+\usepackage[dvips]{xcolor}
+
+\usepackage{graphics}
+\usepackage{transparent}
+\usepackage{tikz}
+\usetikzlibrary{fit}
+
+% Paper settings
+\def\blockwidth{216mm}
+\def\blockheight{303mm}
+
+\def\cropmarginwidth{3mm}
+\def\cropmarkoffset{0.1mm}
+\def\cropmarksize{2.5mm}
+
+% Colors
+\definecolor{pepgray}{HTML}{565656}
+
+% Logo settings Files
+%\def\logofile{logo-negativ.pdf}
+\def\logofile{../logos/pep.pdf}
+
+% Watermark settings
+\def\watermarkfile{pep-schwingung.pdf}
+\def\watermarkscale{8}
+\def\watermarkopacity{0.95}
+
+
+% grid settings
+% horizontal grid: 39 squares per column
+% vertical grid: 56 squares per column
+\def\numdotswidth{39}
+\def\numdotsheight{56}
+
+% 303mm - (56 * 5mm) = 303mm - 280mm = 23mm
+% => top and bottom margin each: 23mm / 2 = 11.5mm
+\def\gridmargintopbottom{11.5mm}
+
+% 216mm - (39 * 5mm) = 216mm - 195mm = 21mm
+% => left and right margin each: 21mm / 2 = 10.5mm
+\def\gridmarginleftright{10.5mm}
+
+% currently the default dotspacing
+\def\dotspacing{5mm}
+
+% dot settings
+\def\dotradius{0.25mm}
+% color of dots where 'pepgray!p!white' means (p% pepgray + (100 - p)% white)
+\def\dotcolor{pepgray!50!white}
+
+% alignment guides for debugging
+\tikzstyle{guidefilled}=[draw=red!50!black, fill=red!50!black]
+\tikzstyle{guidedrawn}=[draw=red!50!black]
+
+\begin{document}
+    \begin{tikzpicture}[x=1mm, y=1mm]
+
+        % common points
+        \coordinate (pagecenter) at (\blockwidth/2, \blockheight/2);
+            
+        % width of logo: (14.5 - 0.5)*0.5cm = 7cm
+        % height of logo: (4.5 - 0.5)*0.5cm = 2cm
+        \coordinate (logonorthwest) at (\gridmarginleftright +
+                                        \dotspacing*\numdotswidth - 14.5*\dotspacing,
+                                        \gridmargintopbottom +
+                                        \dotspacing*\numdotsheight - 0.5*\dotspacing);
+        \coordinate (logosoutheast) at (\gridmarginleftright +
+                                        \dotspacing*\numdotswidth - 0.5*\dotspacing,
+                                        \gridmargintopbottom +
+                                        \dotspacing*\numdotsheight - 4.5*\dotspacing);
+
+        % width of link: (4 + 4)*0.5cm = 4cm
+        % height of link: (1.5 + 0.5)*0.5cm = 1cm
+        \coordinate (linksouthwest) at (\gridmarginleftright +
+                                        0.5*\numdotswidth * \dotspacing - 4*\dotspacing,
+                                        \gridmargintopbottom + 0.5*\dotspacing);
+        \coordinate (linknortheast) at (\gridmarginleftright +
+                                        0.5*\numdotswidth*\dotspacing + 4*\dotspacing,
+                                        \gridmargintopbottom + 1.5*\dotspacing);
+
+
+        % setup page
+        \fill[color=white] (0, 0) rectangle (\blockwidth, \blockheight);
+
+        % crop marks
+            %% south west: 
+            \draw[draw=black] (\cropmarginwidth, \cropmarkoffset) -- (\cropmarginwidth, \cropmarksize);
+            \draw[draw=black] (\cropmarkoffset, \cropmarginwidth) -- (\cropmarksize, \cropmarginwidth);
+
+            %% south east
+            \draw[draw=black] (\blockwidth - \cropmarginwidth, \cropmarkoffset) -- (\blockwidth - \cropmarginwidth, \cropmarksize);
+            \draw[draw=black] (\blockwidth - \cropmarkoffset,  \cropmarginwidth) -- (\blockwidth - \cropmarksize, \cropmarginwidth);
+
+            %% north west
+            \draw[draw=black] (\cropmarginwidth, \blockheight - \cropmarkoffset) -- (\cropmarginwidth, \blockheight - \cropmarksize);
+            \draw[draw=black] (\blockwidth - \cropmarkoffset, \blockheight - \cropmarginwidth) -- (\blockwidth - \cropmarksize, \blockheight - \cropmarginwidth);
+
+            %% north east
+            \draw[draw=black] (\blockwidth - \cropmarginwidth, \blockheight - \cropmarkoffset) -- (\blockwidth - \cropmarginwidth, \blockheight - \cropmarksize );
+            \draw[draw=black] (\cropmarkoffset, \blockheight - \cropmarginwidth) -- (\cropmarksize, \blockheight - \cropmarginwidth);
+
+
+        % setup watermark image
+        \node (watermark) at (pagecenter) {\includegraphics[scale=\watermarkscale]{\watermarkfile}};
+        % overlay with opaque white rectangle to set the opacity of the watermark
+        \filldraw[color=white, opacity=\watermarkopacity] (watermark.south west) rectangle (watermark.north east);
+
+        % draw the dotgrid (from south-west to north-east)
+        \foreach \x in {0,...,\numdotswidth}
+            \foreach \y in {0,...,\numdotsheight}
+                \filldraw[color=\dotcolor] (\dotspacing*\x + \gridmarginleftright, \dotspacing*\y + \gridmargintopbottom) circle(\dotradius);
+
+        % draw the logo with white background
+        \node[fill, color=white, opacity=1, inner sep=0pt,%
+              fit={(logonorthwest) (logosoutheast)},%
+              label=center:{\includegraphics{\logofile}}] (logo) {};
+
+        % draw the link with white background
+        \node[fill, opacity=1, color=white, inner sep=0pt,%
+              fit={(linksouthwest) (linknortheast)},%
+              label=center:{\ttfamily\large pep-dortmund.org}] (link) {};
+
+        {% guides only used for checking the alignment 
+         %  \draw[guidedrawn] (watermark.center) circle (1);
+         %  \draw[guidedrawn] (watermark.center) circle (2);
+         %  \draw[guidedrawn] (watermark.center) circle (3);
+
+         %  \draw[guidefilled] (pagecenter) circle (1);
+
+         %  \draw[guidefilled] (watermark.north) circle (1);
+         %  \draw[guidefilled] (watermark.east) circle (1);
+         %  \draw[guidefilled] (watermark.south) circle (1);
+         %  \draw[guidefilled] (watermark.west) circle (1);
+
+         %  \draw[guidedrawn] (watermark.north) -- (watermark.south);
+         %  \draw[guidedrawn] (watermark.west) -- (watermark.east);
+
+         %  \draw[guidefilled] (logonorthwest) circle (1);
+         %  \draw[guidefilled] (logosoutheast) circle (1);
+
+         %  \draw[guidefilled] (linksouthwest) circle (1);
+         %  \draw[guidefilled] (linknortheast) circle (1);
+         }
+        
+
+    \end{tikzpicture}
+\end{document}
