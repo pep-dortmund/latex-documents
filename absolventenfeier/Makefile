@@ -11,7 +11,8 @@ TARGETS=reserviert \
 	glutenfrei \
 	karbach_preis \
 	beste_fuenf_prozent \
-	deutschland_stipendien
+	deutschland_stipendien \
+	einladung
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
