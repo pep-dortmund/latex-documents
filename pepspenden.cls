@@ -1,4 +1,4 @@
-\ProvidesClass{pepspenden}[2015/05/05 Klasse fuer PeP Spendenbescheinigungen]
+\ProvidesClass{pepspenden}[2023/02/15 Klasse fuer PeP Spendenbescheinigungen]
 \ProcessOptions\relax
 \LoadClass{scrartcl}
 
@@ -61,7 +61,7 @@
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
 
 \newcommand\vorsitzender{%
-  Lena Linhoff\\
+  Jan Herdieckerhoff\\
   Otto-Hahn-Straße 4a\\
   44227 Dortmund%
 }
@@ -127,13 +127,12 @@ Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\squar
 Wir sind wegen Förderung der Volks- und Berufsbildung sowie der
 Studentenhilfe nach dem Freistellungsbescheid bzw. nach der Anlage zum
 Körperschaftsteuerbescheid des Finanzamtes Dortmund-Hörde, StNr. 315/5791/2796,
-vom 27.07.2018 für den letzten Veranlagungszeitraum 2015 bis 2017 nach §\,5
-Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer  und
-nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer  befreit. 
+vom 14.01.2022 für den letzten Veranlagungszeitraum 2018 bis 2020 nach §\,5
+Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer und
+nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer befreit. 
 
-Es wird bestätigt, dass die Zuwendung nur zur Förderung der Volks- und
-Berufsbildung einschließlich der Studentenhilfe (im Sinne der Anlage 1 – zu
-§\,48 Abs.~2 Einkommensteuer-Durchführungsverordnung – Abschnitt A Nr.~4)
+Es wird bestätigt, dass die Zuwendung nur zur 
+Förderung von Wissenschaft und Forschung (§\,52 Abs.~2 Satz~1 Nr.~1 AO)
 verwendet wird.}
 
 \vspace{0.5cm}
