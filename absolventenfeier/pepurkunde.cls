@@ -6,8 +6,7 @@
 \RequirePackage{tikz}
 
 \RequirePackage{xcolor}
-\definecolor{tu}{RGB}{131,184,23}
-\definecolor{physik}{RGB}{8,81,162}
+\input{colors}
 
 \RequirePackage{xparse}
 \RequirePackage[all]{background}
@@ -32,7 +31,5 @@
 \setsansfont{Akkurat Office}
 \renewcommand\familydefault\sfdefault
 
-\RequirePackage{polyglossia}
-\setmainlanguage{german}
-
+\RequirePackage[ngerman]{babel}
 \RequirePackage{graphicx}
