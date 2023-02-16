@@ -1,10 +1,14 @@
-all: pep-block_dotted.pdf
+TARGETS=pep-block_dotted
 
-pep-block_dotted.pdf: pep-block_dotted.tex 
-	lualatex pep-block_dotted.tex
+all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
+
+build/%.pdf: %.tex | build
+	TEXINPUTS=../logos:../common:..: latexmk -r ../common/latexmkrc $<
+
+build:
+	mkdir -p build
 
 clean:
-	rm -rf pep-block_dotted.aux
-	rm -rf pep-block_dotted.log
+	rm -r build
 
 .PHONY: all clean
