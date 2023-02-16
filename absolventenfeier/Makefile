@@ -1,8 +1,3 @@
-TEXOPTS= --lualatex \
-	 --output-directory=build \
-	 --interaction=nonstopmode \
-	 --halt-on-error
-
 TARGETS=reserviert \
 	laecheln_und_winken\
 	moderationskarten \
@@ -17,8 +12,7 @@ TARGETS=reserviert \
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
 build/%.pdf: %.tex | build
-	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $^
-
+	TEXINPUTS=../logos:../common:..: latexmk -r ../common/latexmkrc $<
 
 build:
 	mkdir -p build
