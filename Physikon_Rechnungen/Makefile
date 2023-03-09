@@ -3,7 +3,7 @@ TEXOPTS= --lualatex \
 	 --interaction=nonstopmode \
 	 --halt-on-error
 
-TARGETS=Spende
+TARGETS= Unternehmen/*
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
