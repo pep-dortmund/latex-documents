@@ -1,6 +1,13 @@
 \ProvidesClass{peprechnungen}[2023/02/15 Klasse fuer PeP Rechnungen]
 \ProcessOptions\relax
-\LoadClass{scrartcl}
+\LoadClass[
+  a4paper,
+  fontsize=12pt,
+  parskip=half,
+  foldmarks=false,
+  DIV=14
+]{scrlttr2}
+\LoadLetterOption{pepbrief}
 
 %Fontsettings, compatible with all engines
 \RequirePackage{ifxetex}
@@ -33,17 +40,6 @@
 \setkomafont{pagefoot}{\normalfont\footnotesize}
 \setkomafont{pagehead}{\normalfont}
 
-\KOMAoptions{%
-  fontsize=12pt,
-  paper=a4,
-  parskip=half,
-  headinclude,
-  headheight=50pt,
-  footheight=50pt,
-}
-\typearea{14}
-
-
 \RequirePackage{tabu}
 \RequirePackage{array}
 \RequirePackage{colortbl}
@@ -60,98 +56,52 @@
 \RequirePackage{graphicx}
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
 
-\newcommand\vorsitzender{%
-  Jan Herdieckerhoff\\
-  Otto-Hahn-Straße 4a\\
-  44227 Dortmund%
+\newkomavar[\anrede]{Anrede}
+\newkomavar[\adresse]{Adresse}
+\newkomavar[\betrag]{Betrag}
+\newcounter{Betrag}
+\setcounter{Betrag}{100}
+\newkomavar[\rechnungsdatum]{Rechnungsdatum}
+\newkomavar[\durchfuehrungsdatum]{Durchführungsdatum}
+\newkomavar[\jahr]{Jahr}
+\newkomavar[\rechnungsnummer]{Rechnungsnummer}
+\newkomavar[\fristdatum]{Fristdatum}
+
+\setkomavar{subject}{Rechnung über die Ausstellergebühr für die PhysiKon \usekomavar{Jahr}}
+\setkomavar{invoice}{\usekomavar{Rechnungsnummer}}
+
+\renewcaptionname{ngerman}{\myrefname}{Steuernummer}
+\setkomavar{myref}{315/5791/2796}
+
+\DeclareDocumentCommand\rechnung{}{%
+\begin{letter}{%
+\usekomavar{Adresse}
 }
-
-\ihead{%
-  \textbf{\Large PeP et al.\ e.\,V.} \\
-	Bestätigung über Geldzuwendungen%
-}
-
-\ohead{\includegraphics[height=1.5cm]{logos/pep.pdf}}
-
-\ifoot{%
-  \parbox[c]{5cm}{%
-    PeP et al.\ e.\,V.\\
-    \url{www.pep-dortmund.org}\\
-    \vspace{16pt}
-  }
-}
-
-\cfoot{%
-  \parbox[c]{4.2cm}{%
-    \input{pepadresse.tex}%
-  }
-}
-
-\ofoot{%
-  \hfill%
-  \parbox[c]{5cm}{%
-    Bankverbindung\\
-    \input{pepbankverbindung.tex}%
-  }
-}
-
-\DeclareDocumentCommand\spende{m m m}{%
-\newpage
-\textbf{Aussteller}
-
-Physikstudierende und ehemalige Physikstudierende an der TU Dortmund et al. e.\,V.\\
-\vorsitzender
-
-Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes an eine der in §\,5 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes bezeichneten Körperschaften, Personenvereinigungen oder Vermögensmassen.
-
-\textbf{Name und Anschrift des Zuwendenden}
-
-#3
+% ANREDE
+\opening{\usekomavar{Anrede},}
+% BRIEFTEXT
+für Ihre Teilnahme an der PhysiKon am \usekomavar{Durchführungsdatum} \usekomavar{Jahr} berechnen wir folgende Ausstellergebühr:
 
 \renewcommand{\arraystretch}{1.2}
 \begin{center}
   \bfseries\scshape
-	\begin{tabu}{|[1pt]C{4.5cm}|[1pt]C{6cm}|[1pt]C{4.5cm}|[1pt]}
-		\tabucline[1pt]{-}
-		\rowcolor{grau}
-		 Betrag in Ziffern	&	Betrag in Buchstaben	&	Tag der Zuwendung\\
-		\tabucline[1pt]{-}
-    \rmfamily\normalfont \num{#1},–\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
-		\tabucline[1pt]{-}
-	\end{tabu}
+  \begin{tabular}{| c | c | c |}
+    \hline
+    \rowcolor{grau}
+    Betrag in Ziffern  & Betrag in Buchstaben & Kontoinformationen\\
+    \hline
+    \normalfont \theBetrag,–\,$€$ & \normalfont \Numberstringnum{\theBetrag} Euro & \normalfont \begin{tabular}{@{}c@{}}\input{pepbankverbindung.tex}\end{tabular}\\
+    \hline
+  \end{tabular}
 \end{center}
+Wir bitten Sie, die Ausstellergebühr von \theBetrag{} Euro unter Angabe der Rechnungsnummer \usekomavar{Rechnungsnummer} bis zum \usekomavar{Fristdatum} auf unser Konto bei der Dortmunder Volksbank zu überweisen.
 
-Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\square$\quad Nein $\boxtimes$
+Für Fragen, Probleme oder Anregungen sind wir unter physikon@pep-dortmund.org zu erreichen. Alle Informationen finden Sie auch auf www.physikon.pep-dortmund.org.
 
-{\footnotesize  
-Wir sind wegen Förderung der Volks- und Berufsbildung sowie der
-Studentenhilfe nach dem Freistellungsbescheid bzw. nach der Anlage zum
-Körperschaftsteuerbescheid des Finanzamtes Dortmund-Hörde, StNr. 315/5791/2796,
-vom 14.01.2022 für den letzten Veranlagungszeitraum 2018 bis 2020 nach §\,5
-Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer und
-nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer befreit. 
+Wir freuen uns auf eine erfolgreiche PhysiKon mit Ihnen!\\
 
-Es wird bestätigt, dass die Zuwendung nur zur 
-Förderung von Wissenschaft und Forschung (§\,52 Abs.~2 Satz~1 Nr.~1 AO)
-verwendet wird.}
+Viele Grüße aus Dortmund\\
 
-\vspace{0.5cm}
-Dortmund, den \@date\\[1cm]
-\@author\\
-Vorstand PeP et al.\ e.\,V.\
-
-\vspace*{\fill}
-{\footnotesize
-Hinweis:
-
-Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung
-erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der
-Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden,
-haftet für die Steuer, die dem Fiskus durch einen etwaigen Abzug der
-Zuwendungen bei Zuwendenden entgeht (§\,10b Abs.~4 EStG, §\,9 Abs.~3 KStG,
-§\,9 Nr.5 GewStG).
-
-Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung
-der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als
-5 Jahre bzw.\ das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit
-Ausstellung der Bestätigung zurückliegt (§\,63 Abs.~5 AO). } }
+\@author
+\end{letter}
+}
