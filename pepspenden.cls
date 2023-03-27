@@ -62,7 +62,7 @@
 
 \newcommand\vorsitzender{%
   Jan Herdieckerhoff\\
-  Otto-Hahn-Straße 4a\\
+  Otto-Hahn-Straße 4\\
   44227 Dortmund%
 }
 
@@ -76,7 +76,7 @@
 \ifoot{%
   \parbox[c]{5cm}{%
     PeP et al.\ e.\,V.\\
-    \url{www.pep-dortmund.org}\\
+    \href{https://www.pep-dortmund.org}{www.pep-dortmund.org}\\
     \vspace{16pt}
   }
 }
@@ -102,7 +102,7 @@
 Physikstudierende und ehemalige Physikstudierende an der TU Dortmund et al. e.\,V.\\
 \vorsitzender
 
-Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes an eine der in §\,5 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes bezeichneten Körperschaften, Personenvereinigungen oder Vermögensmassen.
+\textbf{Bestätigung über Geldzuwendungen/Mitgliedsbeitrag} im Sinne §\,10b des Einkommensteuergesetzes an eine der in §\,5 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes bezeichneten Körperschaften, Personenvereinigungen oder Vermögensmassen.
 
 \textbf{Name und Anschrift des Zuwendenden}
 
@@ -111,12 +111,12 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 \renewcommand{\arraystretch}{1.2}
 \begin{center}
   \bfseries\scshape
-	\begin{tabu}{|[1pt]C{4.5cm}|[1pt]C{6cm}|[1pt]C{4.5cm}|[1pt]}
+	\begin{tabu}{|[1pt]C{7cm}|[1pt]C{4cm}|[1pt]C{4cm}|[1pt]}
 		\tabucline[1pt]{-}
 		\rowcolor{grau}
-		 Betrag in Ziffern	&	Betrag in Buchstaben	&	Tag der Zuwendung\\
+		 Betrag der Zuwendung - in Ziffern -	&	- in Buchstaben -	&	Tag der Zuwendung:\\
 		\tabucline[1pt]{-}
-    \rmfamily\normalfont \num{#1},–\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
+    \rmfamily\normalfont #1,–\,€ & \normalfont \Numberstringnum{#1} Euro	&	#2\\
 		\tabucline[1pt]{-}
 	\end{tabu}
 \end{center}
@@ -124,15 +124,14 @@ Bestätigung über Geldzuwendungen im Sinne §\,10b des Einkommensteuergesetzes 
 Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\square$\quad Nein $\boxtimes$
 
 {\footnotesize  
-Wir sind wegen Förderung der Volks- und Berufsbildung sowie der
-Studentenhilfe nach dem Freistellungsbescheid bzw. nach der Anlage zum
-Körperschaftsteuerbescheid des Finanzamtes Dortmund-Hörde, StNr. 315/5791/2796,
-vom 14.01.2022 für den letzten Veranlagungszeitraum 2018 bis 2020 nach §\,5
+Wir sind wegen Förderung \textit{von Wissenschaft und Forschung} nach dem Freistellungsbescheid bzw. nach der Anlage zum
+Körperschaftsteuerbescheid des Finanzamtes \textit{Dortmund-Hörde}, StNr. \textit{315/5791/2796},
+vom \textit{14.01.2022} für den letzten Veranlagungszeitraum \textit{2018 bis 2020} nach §\,5
 Abs.~1 Nr.~9 des Körperschaftsteuergesetzes von der Körperschaftsteuer und
 nach §\,3 Nr.~6 des Gewerbesteuergesetzes von der Gewerbesteuer befreit. 
 
 Es wird bestätigt, dass die Zuwendung nur zur 
-Förderung von Wissenschaft und Forschung (§\,52 Abs.~2 Satz~1 Nr.~1 AO)
+Förderung \textit{von Wissenschaft und Forschung}
 verwendet wird.}
 
 \vspace{0.5cm}
@@ -145,13 +144,12 @@ Vorstand PeP et al.\ e.\,V.\
 Hinweis:
 
 Wer vorsätzlich oder grob fahrlässig eine unrichtige Zuwendungsbestätigung
-erstellt oder wer veranlasst, dass Zuwendungen nicht zu den in der
+erstellt oder veranlasst, dass Zuwendungen nicht zu den in der
 Zuwendungsbestätigung angegebenen steuerbegünstigten Zwecken verwendet werden,
-haftet für die Steuer, die dem Fiskus durch einen etwaigen Abzug der
-Zuwendungen bei Zuwendenden entgeht (§\,10b Abs.~4 EStG, §\,9 Abs.~3 KStG,
+haftet für die entgangene Steuer (§\,10b Abs.~4 EStG, §\,9 Abs.~3 KStG,
 §\,9 Nr.5 GewStG).
 
 Diese Bestätigung wird nicht als Nachweis für die steuerliche Berücksichtigung
 der Zuwendung anerkannt, wenn das Datum des Freistellungsbescheids länger als
-5 Jahre bzw.\ das Datum der vorläufigen Bescheinigung länger als 3 Jahre seit
-Ausstellung der Bestätigung zurückliegt (§\,63 Abs.~5 AO). } }
+5 Jahre bzw.\ das Datum der Feststellung der Einhaltung der satzungsmäßigen Voraussetzungen nach §\,60a Abs.~1 AO länger als 3 Jahre seit
+Ausstellung des Bescheids zurückliegt (§\,63 Abs.~5 AO). } }
