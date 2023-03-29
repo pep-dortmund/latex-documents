@@ -11,8 +11,8 @@ TARGETS=reserviert \
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
-build/%.pdf: %.tex | build
-	TEXINPUTS=../logos:../common:..: latexmk -r ../common/latexmkrc $<
+build/%.pdf: FORCE | build 
+	TEXINPUTS=../logos:../common:..: latexmk -r ../common/latexmkrc $*.tex
 
 build:
 	mkdir -p build
@@ -20,4 +20,6 @@ build:
 clean:
 	rm -r build
 
-.PHONY: all clean
+FORCE:
+
+.PHONY: all clean FORCE

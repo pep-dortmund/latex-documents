@@ -12,12 +12,16 @@
 
 \usepackage{graphicx}
 
+\usepackage{qrcode}
+
 \pagestyle{empty}
 
 \usepackage{tikz}
 
 \usepackage{xcolor}
 \input{colors}
+
+\usepackage[colorlinks,urlcolor=tu]{hyperref}
 
 \begin{document}
 
@@ -35,31 +39,40 @@
 
 {\Large%
   Der Verein der Physikstudierenden und ehemaligen Physikstudierenden
-  \enquote{PeP et al. e.\,V.} gratuliert Ihnen zu Ihrem Abschluss.
+  \enquote{PeP et al. e.\,V.} gratuliert dir zu deinem Abschluss.
 
-  Wir wünschen Ihnen auch weiterhin viel Erfolg!
+  Wir wünschen dir auch weiterhin viel Erfolg!
 }
 
 \vfill
 
-{
-  \fontsize{140}{160}\selectfont\color{yellow!85!red}
-  \faIcon[regular]{smile-wink}
-}
+{%
+  \fontsize{140}{160}\selectfont\color{yellow!85!red}%
+  \faIcon[regular]{smile-wink}%
+}%
 
+\vfill
+Falls du noch kein PeP-Mitglied bist, kannst du dich hier anmelden:
+
+{%
+\hypersetup{urlcolor=black!90}%
+\qrcode[height=2.5cm]{https://u.pep-dortmund.org/mitgliedwerden}%
+}%
+
+\url{https://u.pep-dortmund.org/mitgliedwerden}
 
 \vfill
 {\large%
-  Falls Ihnen ihr Zeugnis noch nicht ausgehändigt wurde,
-  melden Sie sich bitte im Dekanat.
+  Falls dir dein Zeugnis noch nicht ausgehändigt wurde,
+  melde dich bitte im Dekanat.
 }
 
 
 \vspace{0.5cm}
 
-\includegraphics[height=1.4cm]{tu.pdf}%
-\hfill%
-\includegraphics[height=1.4cm]{fakultaet.pdf}\\[0.5cm]
 \includegraphics[height=1.4cm]{pep.pdf}
+\hfill
+\includegraphics[height=1.4cm]{fakultaet.pdf}\\[.5cm]
+\includegraphics[height=1.4cm]{tu.pdf}
   
 \end{document}
