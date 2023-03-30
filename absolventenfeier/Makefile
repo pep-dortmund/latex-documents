@@ -7,7 +7,8 @@ TARGETS=reserviert \
 	karbach_preis \
 	beste_fuenf_prozent \
 	deutschland_stipendien \
-	einladung
+	einladung \
+	garderobe
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
