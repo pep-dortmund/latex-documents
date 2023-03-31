@@ -8,7 +8,8 @@ TARGETS=reserviert \
 	beste_fuenf_prozent \
 	deutschland_stipendien \
 	einladung \
-	garderobe
+	garderobe \
+    fotorechte
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 

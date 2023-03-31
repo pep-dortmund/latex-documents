@@ -1,0 +1,65 @@
+\documentclass[paper=landscape]{scrartcl}
+
+
+\usepackage[margin=1cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Akkurat Office}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{tabularray}
+
+\pagestyle{empty}
+
+\usepackage{xcolor}
+\input{colors}
+
+
+\begin{document}
+
+
+\begin{minipage}{0.44\textwidth}%
+  \includegraphics[height=1.9cm]{tu.pdf}%
+\end{minipage}%
+\begin{minipage}{0.25\textwidth}%
+  \centering
+  \includegraphics[height=1.9cm]{pep.pdf}%
+\end{minipage}%
+\begin{minipage}{0.29\textwidth}%
+  \raggedleft%
+  \includegraphics[height=1.9cm]{fakultaet.pdf}%
+\end{minipage}%
+
+\vfill
+
+\begin{center}
+  % \fontsize{100}{120}\selectfont\bfseries%
+    \begin{tblr}{colspec={c X}, rows={m}}
+        {%
+            \fontsize{140}{160}\selectfont\color{tu}%
+            \faIcon[regular]{camera}%
+            \vspace{-.5em}
+        }%
+        &
+        {%
+            \fontsize{30}{35}\selectfont
+            Während der Veranstaltung wird fotografiert.
+            Das Fotomaterial
+            wird für unsere Öffentlichkeitsarbeit, z.B.
+            im Internet verwendet.
+        }\\
+    \end{tblr}
+\end{center}
+
+\vfill
+
+\begin{center}
+  \huge Absolventenfeier\\
+  der Fakultät Physik und des Alumni-Vereins
+  Physikstudierende und ehemalige Physikstudierende et al.\ e.\,V.
+\end{center}
+  
+\end{document}
