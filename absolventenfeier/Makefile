@@ -9,7 +9,8 @@ TARGETS=reserviert \
 	deutschland_stipendien \
 	einladung \
 	garderobe \
-    fotorechte
+	fotorechte \
+	spenden
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
