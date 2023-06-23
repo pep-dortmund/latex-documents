@@ -1,0 +1,154 @@
+\documentclass[paper=landscape]{scrartcl}
+
+
+\usepackage[margin=1cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Akkurat Office}
+
+\usepackage[ngerman]{babel}
+
+\usepackage{graphicx}
+
+\pagestyle{empty}
+
+\usepackage{xcolor}
+\input{colors}
+
+\usepackage{pgffor}
+
+\newcommand{\fiftytext}[1]{
+\begin{minipage}{0.49\linewidth}%
+  \raggedright
+  \includegraphics[height=1.9cm]{pep.pdf}%
+\end{minipage}%
+\begin{minipage}{0.48\linewidth}%
+  \raggedleft%
+  \includegraphics[height=1.9cm]{fakultaet.pdf}%
+\end{minipage}%
+
+\vfill
+
+\begin{center}
+  \fontsize{50}{50}\selectfont\bfseries%
+    #1
+\end{center}
+
+\vfill
+
+\begin{center}
+  \begin{minipage}[b]{0.20\textwidth}
+    \raggedleft
+        \fontsize{24}{24}\selectfont\normalfont 50 jahre\\[.05cm] physik
+  \end{minipage}
+    \begin{minipage}[b]{.5\textwidth}
+    \raggedright
+    \includegraphics[height=1.9cm]{tu.pdf}
+  \end{minipage}
+\end{center}
+}
+
+\newcommand{\lf}[4]{
+\begin{minipage}{0.49\linewidth}%
+  \raggedright
+  \includegraphics[height=1.9cm]{pep.pdf}%
+\end{minipage}%
+\begin{minipage}{0.48\linewidth}%
+  \raggedleft%
+  \includegraphics[height=1.9cm]{fakultaet.pdf}%
+\end{minipage}%
+
+\vfill
+
+\begin{center}
+  \fontsize{50}{50}\selectfont\bfseries%
+    Teilnehmendenkarte #4\\
+    \vfill
+    Laborführung #1 Uhr:\\[.5em]
+    #2 \\[.5em]
+    Gruppe #3\\
+    \vfill
+\end{center}
+
+\vfill
+
+\begin{center}
+  \begin{minipage}[b]{0.20\textwidth}
+    \raggedleft
+        \fontsize{24}{24}\selectfont\normalfont 50 jahre\\[.05cm] physik
+  \end{minipage}
+    \begin{minipage}[b]{.5\textwidth}
+    \raggedright
+    \includegraphics[height=1.9cm]{tu.pdf}
+  \end{minipage}
+\end{center}
+}
+
+\begin{document}
+    \foreach \gruppe in {1,...,6}{
+        \foreach \i in {1,...,10}{
+            \lf{13:30}{Synchrotronstrahlungsquelle DELTA}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1,...,6}{
+        \foreach \i in {1,...,10}{
+            \lf{14:30}{Synchrotronstrahlungsquelle DELTA}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1,...,2}{
+        \foreach \i in {1,...,8}{
+            \lf{13:30}{AG Cinchetti \\Magneto-Optik und Photoemission}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1,...,2}{
+        \foreach \i in {1,...,8}{
+            \lf{14:30}{AG Cinchetti \\Magneto-Optik und Photoemission}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1}{
+        \foreach \i in {1,...,5}{
+            \lf{13:30}{Führung Physikalische Praktika}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1}{
+        \foreach \i in {1,...,10}{
+            \lf{13:30}{Labore AG Kröninger}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1}{
+        \foreach \i in {1,...,10}{
+            \lf{14:30}{Labore AG Kröninger}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1,2}{
+        \foreach \i in {1,...,10}{
+            \lf{13:30}{Laserlabore Experimentelle Physik 2}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1,2}{
+        \foreach \i in {1,...,10}{
+            \lf{14:30}{Laserlabore Experimentelle Physik 2}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1}{
+        \foreach \i in {1,...,12}{
+            \lf{13:30}{AG Albrecht}{\gruppe}{\i}
+            \newpage
+        }
+    }
+    \foreach \gruppe in {1}{
+        \foreach \i in {1,...,12}{
+            \lf{14:30}{AG Albrecht}{\gruppe}{\i}
+            \newpage
+        }
+    }
+\end{document}
