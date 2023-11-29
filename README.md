@@ -14,6 +14,10 @@ Den Wert erfährt man über
 $ kpsewhich -var-value TEXMFHOME
 ```
 
+## Dependencies
+Vor allem im Ordner `absolventenfeier` werden Akkurat Office Fonts benötigt.
+Diese können PeP Mitglieder im Nextcloud Ordner unter diesem [Link](https://nextcloud.pep-dortmund.org/apps/files/?dir=/PR/AkkuratFont&fileid=195188) finden.
+
 ## Spendenbescheinigung
 
 Die Klasse `pepspenden` ist für das Austellen von Spendenbescheinigungen
