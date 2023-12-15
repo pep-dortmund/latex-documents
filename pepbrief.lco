@@ -24,7 +24,7 @@
 
 \setkomavar{fromlogo}{\includegraphics[height=1.5cm]{pep.pdf}}
 
-\setkomavar{fromurl}[]{\url{www.pep-dortmund.org}}
+\setkomavar{fromurl}[]{\url{https://www.pep-dortmund.org}}
 \setkomavar{signature}{\@author\\Vorstand PeP et al.\ e.\,V.}
 \setkomavar{place}{Dortmund}
 \renewcommand*{\raggedsignature}{\raggedright}
