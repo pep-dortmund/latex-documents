@@ -24,10 +24,14 @@
 
 \setkomavar{fromlogo}{\includegraphics[height=1.5cm]{pep.pdf}}
 
-\setkomavar{fromurl}[]{\url{www.pep-dortmund.org}}
+\setkomavar{fromurl}[]{\href{https://www.pep-dortmund.org}{www.pep-dortmund.org}}
+
 \setkomavar{signature}{\@author\\Vorstand PeP et al.\ e.\,V.}
+
 \setkomavar{place}{Dortmund}
+
 \renewcommand*{\raggedsignature}{\raggedright}
+
 % \setkomavar{location}{%
 %   \raggedright%
 %   \textbf{PeP et al. e.V.}\\
