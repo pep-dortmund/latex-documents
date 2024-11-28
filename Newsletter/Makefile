@@ -3,7 +3,8 @@ TEXOPTS= --lualatex \
 	 --interaction=nonstopmode \
 	 --halt-on-error
 
-TARGETS=Newsletter
+TARGETS=Spende \
+		Newsletter
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
