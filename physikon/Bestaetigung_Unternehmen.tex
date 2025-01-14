@@ -21,7 +21,7 @@
 \usepackage{siunitx}
 
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-
+\renewcommand\pagemark{}
 \usepackage{xcolor}
 \usepackage[colorlinks=true,urlcolor=blue!50!black]{hyperref}
 \definecolor{grau}{rgb}{0.830,0.865,0.857}
@@ -32,8 +32,8 @@
 \begin{document}
 \begin{letter}{%
   <Vorname Nachname>\\
-  Musterstraße 1 \\
-  12345 Musterhausen
+  <Musterstraße 1> \\
+  <12345 Musterhausen>
 }
 % ANREDE
 \opening{Guten Tag <Vorname Nachname>,}
