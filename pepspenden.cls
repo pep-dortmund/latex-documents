@@ -1,4 +1,11 @@
 \ProvidesClass{pepspenden}[2023/02/15 Klasse fuer PeP Spendenbescheinigungen]
+
+\newif\if@foldmark\@foldmarkfalse
+\DeclareOption{foldmark}{\@foldmarktrue}
+
+\newif\if@punchmark\@punchmarkfalse
+\DeclareOption{punchmark}{\@punchmarktrue}
+
 \ProcessOptions\relax
 \LoadClass{scrartcl}
 
@@ -29,6 +36,61 @@
 \FCloadlang{german}
 
 \RequirePackage{scrlayer-scrpage}
+
+\newlength{\foldmarklength}
+\newlength{\punchmarklength}
+\newlength{\markhpos}
+\newlength{\markthickness}
+\newlength{\tfoldmarkvpos}
+\newlength{\bfoldmarkvpos}
+
+\setlength{\foldmarklength}{2mm}
+\setlength{\punchmarklength}{4mm}
+\setlength{\markhpos}{3.5mm}
+\setlength{\markthickness}{0.2mm}
+\setlength{\tfoldmarkvpos}{0.34\paperheight}
+\setlength{\bfoldmarkvpos}{0.67\paperheight}
+
+\NewDocumentCommand\leftmarkline{m}{%
+  \parbox[c][\layerheight][b]{\layerwidth}{%
+    \hspace*{\markhpos}\rule{#1}{\markthickness}%
+  }
+}
+
+\DeclareNewLayer[{%
+    background,
+    innermargin,
+    oddpage,
+    height=\tfoldmarkvpos,
+    contents={%
+      \if@foldmark
+        \leftmarkline{\foldmarklength}
+      \fi
+    }
+}]{tfoldmark}
+
+\DeclareNewLayer[{%
+  clone=tfoldmark,
+  height=\bfoldmarkvpos,
+  contents={%
+    \if@foldmark
+      \leftmarkline{\foldmarklength}
+    \fi
+  }
+}]{bfoldmark}
+
+\DeclareNewLayer[{%
+  clone=tfoldmark,
+  height=0.5\paperheight,
+  contents={%
+    \if@punchmark
+      \leftmarkline{\punchmarklength}
+    \fi
+  }
+}]{punchmark}
+
+\AddLayersAtBeginOfPageStyle{scrheadings}{tfoldmark,bfoldmark,punchmark}
+
 \pagestyle{scrheadings}
 \setkomafont{pagefoot}{\normalfont\footnotesize}
 \setkomafont{pagehead}{\normalfont}
@@ -61,7 +123,7 @@
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
 
 \newcommand\vorsitzender{%
-  Jan Herdieckerhoff\\
+  Anno Knierim\\
   Otto-Hahn-Straße 4\\
   44227 Dortmund%
 }
@@ -89,7 +151,7 @@
 
 \ofoot{%
   \hfill%
-  \parbox[c]{5cm}{%
+  \parbox[c]{5.1cm}{%
     Bankverbindung\\
     \input{pepbankverbindung.tex}%
   }
@@ -123,7 +185,7 @@ Physikstudierende und ehemalige Physikstudierende an der TU Dortmund et al. e.\,
 
 Es handelt sich um den Verzicht auf Erstattung von Aufwendungen\qquad Ja $\square$\quad Nein $\boxtimes$
 
-{\footnotesize  
+{\footnotesize
 Wir sind wegen Förderung \textit{von Wissenschaft und Forschung} nach dem Freistellungsbescheid bzw. nach der Anlage zum
 Körperschaftsteuerbescheid des Finanzamtes \textit{Dortmund-Hörde}, StNr. \textit{315/5791/2796},
 vom \textit{14.01.2022} für den letzten Veranlagungszeitraum \textit{2018 bis 2020} nach §\,5
