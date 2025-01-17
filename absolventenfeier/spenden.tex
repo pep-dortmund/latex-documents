@@ -9,6 +9,8 @@
 \usepackage[ngerman]{babel}
 
 \usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{tabularray}
 
 \pagestyle{empty}
 
@@ -34,8 +36,15 @@
 \vfill
 
 \begin{center}
-  \fontsize{120}{140}\selectfont\bfseries%
-  RESERVIERT
+  % \fontsize{100}{120}\selectfont\bfseries%
+    \begin{tblr}{colspec={c}, rows={m}}
+        {%
+            \fontsize{60}{70}\bfseries\selectfont
+            Spenden für PeP et. al. e.V. \\
+            und \\
+            Mitgliedsanträge
+        }\\
+    \end{tblr}
 \end{center}
 
 \vfill

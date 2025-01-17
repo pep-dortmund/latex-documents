@@ -1,8 +1,3 @@
-TEXOPTS= --lualatex \
-	 --output-directory=build \
-	 --interaction=nonstopmode \
-	 --halt-on-error
-
 TARGETS=reserviert \
 	laecheln_und_winken\
 	moderationskarten \
@@ -11,13 +6,16 @@ TARGETS=reserviert \
 	glutenfrei \
 	karbach_preis \
 	beste_fuenf_prozent \
-	deutschland_stipendien
+	deutschland_stipendien \
+	einladung \
+	garderobe \
+	fotorechte \
+	spenden
 
 all: $(addprefix build/, $(addsuffix .pdf, $(TARGETS)))
 
-build/%.pdf: %.tex | build
-	TEXINPUTS=../logos:..: latexmk $(TEXOPTS) $^
-
+build/%.pdf: FORCE | build 
+	TEXINPUTS=../logos:../common:..: latexmk -r ../common/latexmkrc $*.tex
 
 build:
 	mkdir -p build
@@ -25,4 +23,6 @@ build:
 clean:
 	rm -r build
 
-.PHONY: all clean
+FORCE:
+
+.PHONY: all clean FORCE

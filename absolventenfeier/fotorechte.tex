@@ -9,6 +9,8 @@
 \usepackage[ngerman]{babel}
 
 \usepackage{graphicx}
+\usepackage{fontawesome5}
+\usepackage{tabularray}
 
 \pagestyle{empty}
 
@@ -34,8 +36,22 @@
 \vfill
 
 \begin{center}
-  \fontsize{120}{140}\selectfont\bfseries%
-  RESERVIERT
+  % \fontsize{100}{120}\selectfont\bfseries%
+    \begin{tblr}{colspec={c X}, rows={m}}
+        {%
+            \fontsize{140}{160}\selectfont\color{tu}%
+            \faIcon[regular]{camera}%
+            \vspace{-.5em}
+        }%
+        &
+        {%
+            \fontsize{30}{35}\selectfont
+            Während der Veranstaltung wird fotografiert.
+            Das Fotomaterial
+            wird für unsere Öffentlichkeitsarbeit, z.B.
+            im Internet verwendet.
+        }\\
+    \end{tblr}
 \end{center}
 
 \vfill

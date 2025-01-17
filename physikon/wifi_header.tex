@@ -1,0 +1,36 @@
+\documentclass{scrartcl}
+
+\usepackage[a4paper, margin=0.5cm]{geometry}
+\usepackage{fontspec}
+\setsansfont{Fira Sans}
+\setmonofont{Fira Mono}
+\renewcommand\familydefault\sfdefault
+
+\usepackage{tikz}
+\usepackage{graphics}
+\usepackage{tabularray}
+
+\usepackage{xparse}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+
+
+\NewDocumentCommand \wifi {m m} {%
+  \begin{tikzpicture}[baseline=0pt]%
+    \draw[thin] (0, 0) rectangle (100mm, 25mm);
+    \node[anchor=west, inner sep=0pt, align=left] (logo) at (2.5mm, 12.5mm) {%
+      \includegraphics[height=10mm, keepaspectratio]{images/logo-pfeil-gruen.pdf}\\%
+      \includegraphics[height=10mm, keepaspectratio]{pep.pdf}%
+    };
+    \node[anchor=west, xshift=2mm, inner sep=0pt, align=center, text width=50mm] at (logo.east) {%
+    \textbf{\large WLAN-Zugang: TU-Gast}
+    \begin{tblr}{colspec={l l l}, row{2}={font=\ttfamily}}
+      User & Password \\
+      #1 & #2 \\
+    \end{tblr}
+    };
+  \end{tikzpicture}%
+}%
