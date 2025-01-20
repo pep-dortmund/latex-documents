@@ -60,7 +60,7 @@
 \setkomafont{pagefoot}{\upshape}
 \ohead{\includegraphics[height=1.5cm]{logos/pep.pdf}}
 \ihead{\vspace*{\fill}\Large\bfseries \@title\ \@date}
-\cfoot{\href{http://pep-dortmund.org}{\texttt{pep-dortmund.org}}}
+\cfoot{\href{https://pep-dortmund.org}{\texttt{pep-dortmund.org}}}
 
 \RequirePackage{xcolor}
 \PassOptionsToPackage{%
