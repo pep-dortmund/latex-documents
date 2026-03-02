@@ -123,7 +123,7 @@
 \RequirePackage[colorlinks=true, urlcolor=blue!50!black, unicode]{hyperref}
 
 \newcommand\vorsitzender{%
-  Anno Knierim\\
+  Luca Davide Di Bella\\
   Otto-Hahn-Straße 4\\
   44227 Dortmund%
 }
