@@ -16,8 +16,7 @@
 \ifluatex%
   \RequirePackage{fontspec}
   \setmainfont{Source Sans Pro}
-  \RequirePackage{polyglossia}
-  \setmainlanguage{german}
+  \RequirePackage[ngerman]{babel}
 \else%
   \ifxetex%
     \RequirePackage{fontspec}
@@ -71,6 +70,7 @@
 \setkomavar{invoice}{\usekomavar{Rechnungsnummer}}
 
 \renewcaptionname{ngerman}{\myrefname}{Steuernummer}
+\renewcaptionname{ngerman}{\yourrefname}{Bestellnummer}
 \setkomavar{myref}{315/5791/2796}
 
 \DeclareDocumentCommand\rechnung{}{%
@@ -95,6 +95,7 @@ für Ihre Teilnahme an der PhysiKon am \usekomavar{Durchführungsdatum} \usekoma
   \end{tabular}
 \end{center}
 Wir bitten Sie, die Ausstellergebühr von \theBetrag{} Euro unter Angabe der Rechnungsnummer \usekomavar{Rechnungsnummer} bis zum \usekomavar{Fristdatum} auf unser Konto bei der Dortmunder Volksbank zu überweisen.
+Gemäß § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.
 
 Für Fragen, Probleme oder Anregungen sind wir unter physikon@pep-dortmund.org zu erreichen. Alle Informationen finden Sie auch auf www.physikon.pep-dortmund.org.
 
